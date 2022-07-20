@@ -11,6 +11,7 @@ import Cart from "./components/Cart/cart";
 import Home from "./components/Home/home";
 import Checkout from "./components/Checkout/chekcout";
 import Shipping from "./components/Shipping/shipping";
+import { Navigate } from "react-router-dom";
 
 const Router = () => (
   
