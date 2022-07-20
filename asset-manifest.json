@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/adobecapstoneassignment/static/css/main.64fcefb7.css",
-    "main.js": "/adobecapstoneassignment/static/js/main.fb89b480.js",
+    "main.js": "/adobecapstoneassignment/static/js/main.76d72b4f.js",
     "static/media/hero-image.jpg": "/adobecapstoneassignment/static/media/hero-image.354ecf125eb18b45e770.jpg",
     "static/media/sliders.svg": "/adobecapstoneassignment/static/media/sliders.07a0e59562aded129aac7c8a5259c413.svg",
     "static/media/trash.svg": "/adobecapstoneassignment/static/media/trash.a3e697fde0ae7e80f40a3f3214ef433d.svg",
@@ -18,10 +18,10 @@
     "static/media/edit.svg": "/adobecapstoneassignment/static/media/edit.d86fb5c57c99ad0d8312adf90283ac77.svg",
     "static/media/facebook.svg": "/adobecapstoneassignment/static/media/facebook.b5b54c5572636785078a.svg",
     "main.64fcefb7.css.map": "/adobecapstoneassignment/static/css/main.64fcefb7.css.map",
-    "main.fb89b480.js.map": "/adobecapstoneassignment/static/js/main.fb89b480.js.map"
+    "main.76d72b4f.js.map": "/adobecapstoneassignment/static/js/main.76d72b4f.js.map"
   },
   "entrypoints": [
     "static/css/main.64fcefb7.css",
-    "static/js/main.fb89b480.js"
+    "static/js/main.76d72b4f.js"
   ]
 }
