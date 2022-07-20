@@ -1,0 +1,142 @@
+@import '../../../base/mixins';
+@import '../../../base/style.scss';
+@import '../../../base/variables';
+@import '../../../base/defaultstyle';
+
+* {
+    font-family: var(--unnamed-font-family-muli);
+}
+
+.checkout {
+    .headline {
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-45) var(--unnamed-font-family-source-serif-pro);
+        font: normal normal 600 36px/45px Source Serif Pro;
+        text-align: center;
+        color: var(--unnamed-color-172026);
+        margin: 10px 0;
+    }
+
+    .band {
+        width: 102px;
+        height: 8px;
+        background: var(--primary-brand) 0% 0% no-repeat padding-box;
+        margin: auto;
+    }
+
+    .sub-title {
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
+        font: normal normal 600 24px/30px Source Serif Pro;
+    }
+
+    .input-div {
+        .label-text {
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .express {
+        border: 1px solid #D1D3D6;
+        padding: 25px;
+        margin-bottom: 30px;
+        .express-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .mobile-btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .shipping-method{
+        border-bottom: 1px solid #72777F;
+    }
+    .summary {
+        border: 1px solid #D1D3D6;
+        padding: 25px;
+        margin-bottom: 30px;
+
+        h5 {
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-muli);
+            color: var(--unnamed-color-172026);
+            font: normal normal 600 20px/30px Mulish;
+            margin-bottom: 10px;
+        }
+
+        .pricing-details {
+            div {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+                p {
+                    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+                    font: normal normal normal 16px/24px Mulish;
+                }
+
+            }
+
+            .btn-div {
+                justify-content: center;
+
+                button {
+                    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-14)/16px var(--unnamed-font-family-muli);
+                    font: normal normal bold 14px/16px Mulish;
+                }
+            }
+
+            .pricing-total {
+                p {
+                    color: var(--unnamed-color-172026);
+                    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+                    font: normal normal bold 16px/24px Mulish;
+                }
+
+            }
+        }
+    }
+
+}
+
+@include desktop {
+    .checkout {
+        .headline {
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-45) var(--unnamed-font-family-source-serif-pro);
+            font: normal normal 600 40px/45px Source Serif Pro;
+        }
+
+        .sub-title {
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
+            color: var(--unnamed-color-172026);
+            font: normal normal 600 36px/30px Source Serif Pro;
+        }
+
+        input,
+        select {
+            width: 300px;
+        }
+
+        .state {
+            width: 180px;
+            margin-right: 20px;
+        }
+
+        .zip {
+            input {
+                width: 100px;
+            }
+        }
+        .mobile-btn {
+        }
+        .desktop-btn{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

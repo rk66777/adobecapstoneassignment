@@ -1,0 +1,135 @@
+@import '../../../base/mixins';
+@import '../../../base/style.scss';
+@import '../../../base/variables';
+@import '../../../base/defaultstyle';
+@import '../../../framework/aem-grid-12';
+
+.header-container{
+    background-color: $primary-brand;
+    .header{
+        padding: 15px 5px;
+        .navbar{
+            
+            .hamburger{
+                width: 25px;
+                height: 20px;
+                background-image: url('../images/align-justify.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .nav-title{
+                font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+                font: normal normal normal 16px/24px Mulish;
+                letter-spacing: 2px;
+                text-align: right;
+                flex-basis: 50%;
+                color: $color_white;
+            }
+            .align-right{
+                flex-basis: 40%;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+            }
+            .seacrh-icon{
+                width: 17px;
+                height: 17px;
+                background-image: url('../images/search.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                margin-right: 20%;
+            }
+            .user-icon{
+                width: 17px;
+                height: 17px;
+                background-image: url('../images/user.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                margin-right: 20%;
+            }
+            .cart-icon{
+                width: 18px;
+                height: 20px;
+                background-image: url('../images/shopping-bag.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+    }
+}
+
+@include desktop{
+    .header-container{
+        .header{
+            padding: 25px 0;
+            .header-logo{
+                width: 10%;
+                height: 10%;
+                .logo{
+                    max-width: 100%;
+                }
+                .nav-title{
+                    font: normal normal normal 22px/24px Mulish;
+                    letter-spacing: 2px;
+                    color: $color_white;
+                }
+            }
+            .menu{
+                width: 80%;
+                display: flex;
+                justify-content: center;               
+                padding: 0;
+                .menu-item{
+                    list-style-type: none;
+                    padding: 0 15px;
+                    .item{
+                        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+                        font: normal normal 600 16px/24px Mulish;
+                        color: $color_white;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .menu-right{
+                width: 10%;
+                display: flex;
+                justify-content: flex-end;
+                .seacrh-icon{
+                    width: 17px;
+                    height: 17px;
+                    background-image: url('../images/search.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+                .user-icon{
+                    width: 17px;
+                    height: 17px;
+                    background-image: url('../images/user.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+                .cart-icon{
+                    width: 18px;
+                    height: 20px;
+                    background-image: url('../images/shopping-bag.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+                .item-text{
+                    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+                    font: normal normal 600 16px/24px Mulish;
+                    color: $color_white;
+                    padding-left: 20px;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import '../../../base/mixins';
+@import '../../../base/style.scss';
+@import '../../../base/variables';
+@import '../../../base/defaultstyle';
+@import '../../../framework/aem-grid-12';
+
+.product-detail{
+    .product-list{
+        li{
+            list-style-type: none;
+            height: 80px;
+            width: 80px;
+            img{
+                max-width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .breadcrumb{
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+        color: var(--unnamed-color-172026);
+        font: normal normal normal 16px/24px Mulish;
+        padding: 20px 0;
+    }
+    .product-title{
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
+        color: var(--unnamed-color-172026);
+        font: normal normal 600 24px/30px Source Serif Pro;
+        margin: 8px 0;
+    }
+    .product-price{
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-muli);
+        color: var(--unnamed-color-172026);
+        font: normal normal 600 20px/30px Mulish;
+        margin: 8px 0;
+    }
+    .product-rating{
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+        color: var(--unnamed-color-172026);
+        font: normal normal 600 14px/24px Mulish;
+        margin: 8px 0;
+    }
+    .product-desc{
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+        color: var(--unnamed-color-172026);
+        font: normal normal normal 16px/24px Mulish;
+        margin: 10px 0;
+    }
+    .add-cart{
+        width: 300px;
+        height: 40px;
+        margin: 20px 0;
+    }
+}

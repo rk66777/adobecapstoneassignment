@@ -1,0 +1,110 @@
+@import '../../../base/mixins';
+@import '../../../base/style.scss';
+@import '../../../base/variables';
+@import '../../../base/defaultstyle';
+@import '../../../framework/aem-grid-12';
+
+.footer{
+    .footer-container{
+        padding: 35px 15px;
+        .division-container{
+            padding-bottom: 50px;
+            .division {
+                padding: 10px 0;
+                .div-item{
+                    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+                    font: normal normal 600 14px/24px Mulish;
+                    color: $footer-links;
+                    padding: 5px 0;
+                    &:first-child{
+                        color: var(--unnamed-color-172026);
+                    }
+                }
+                .social-media{
+                    display: flex;
+                    margin: 8px 0;
+                    .social-icon{
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 20px;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                    }
+                    .instagram{
+                        background-image: url('../images/instagram.svg');
+                    }
+                    .facebook{
+                        background-image: url('../images/facebook.svg');
+                    }
+                    .twitter{
+                        background-image: url('../images/twitter.svg');
+                    }
+                }
+            }
+        }
+    }
+    .copyright-container{
+        padding: 30px 20px;
+        .terms{
+            text-align: center;
+            .terms-text{
+                font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-17-5) Proxima Nova; letter-spacing: var(--unnamed-character-spacing-0);
+                color: var(--unnamed-color-172026);
+                font: normal normal normal 14px/18px Mulish;
+                font-weight: 600;
+                padding-right: 15px;
+            }
+        }
+        .copyright{
+            padding: 40px;
+            .copyright-text{
+                text-align: center;
+                font: normal normal normal 14px/18px Mulish;
+                color: #545D63;
+                span{
+                    display: block;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+@include desktop{
+    .footer{
+        .footer-container{
+            padding: 35px 100px;
+            .division-container{
+                display: flex;
+                justify-content: space-around;
+                .division{
+                    width: 20%;
+                }
+            }
+        }
+        .copyright-container{
+            padding: 35px 100px;
+            display: flex;
+            justify-content: space-around;
+            .footer-logo-div{
+                width: 10%;
+                height: 10%;
+                .footer-logo{
+                    max-width: 100%;
+                }
+            }  
+            .terms{
+                order: 3;
+            }
+            .copyright{
+                padding: 0;
+                .copyright-text{
+                    span{
+                        display: inline-block;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
