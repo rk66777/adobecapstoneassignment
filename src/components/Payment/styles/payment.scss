@@ -2,7 +2,7 @@
 @import '../../../base/style.scss';
 @import '../../../base/variables';
 @import '../../../base/defaultstyle';
-.shipping{
+.payment{
     .headline {
         font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-45) var(--unnamed-font-family-source-serif-pro);
         font: normal normal 600 36px/45px Source Serif Pro;
@@ -80,5 +80,17 @@
         margin-right: auto;
         display: flex;
         justify-content: center;
+    }
+    .input-div{
+        width: 50%;
+    }
+    .card-div{
+        width: 50%;
+        .expiry-div{
+            width: 70%;
+        }
+        .cvv-div{
+            width: 25%;
+        }
     }
 }

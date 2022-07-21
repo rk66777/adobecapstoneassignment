@@ -12,6 +12,7 @@ import Home from "./components/Home/home";
 import Checkout from "./components/Checkout/chekcout";
 import Shipping from "./components/Shipping/shipping";
 import { Navigate } from "react-router-dom";
+import Payment from "./components/Payment/paymment";
 
 const Router = () => (
   
@@ -27,6 +28,7 @@ const Router = () => (
           <Route path="cart" element={<Cart />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="shipping" element={<Shipping />} />
+          <Route path="payment" element={<Payment />} />
           
         </Routes>
         <Footer />
