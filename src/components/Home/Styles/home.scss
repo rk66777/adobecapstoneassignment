@@ -34,7 +34,7 @@
 
         .hero-mobile-image {
             height: 450px;
-            background-image: url('../images/hero-image.jpg');
+            background-image: url('../images/shopping.jfif');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -57,10 +57,23 @@
 
             .category-image {
                 height: 80%;
-                background-image: url('../images/hero-image.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
+            }
+
+            .image-1{
+                background-image: url('../images/hero-image.jpg');
+            }
+
+            .image-2{
+                background-image: url('../images/men.jfif');
+            }
+            .image-3{
+                background-image: url('../images/women.jpg');
+            }
+            .image-4{
+                background-image: url('../images/jewellery.jfif');
             }
 
             .category-text {

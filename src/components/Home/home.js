@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import './Styles/home.scss';
 import hero from "./images/hero-image.jpg";
+import shopping from "./images/shopping.jfif";
+import adventure from "./images/adventure.jpg";
+import leggings from "./images/leggings.webp";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -23,7 +26,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--phone--0 aem-GridColumn--default--6 hero-desktop-image">
-                            <div className="desktop-image-div"><img src={hero} alt="hero banner image" /></div>
+                            <div className="desktop-image-div"><img src={shopping} alt="hero banner image" /></div>
                         </div>
                     </div>
                 </div>
@@ -31,9 +34,18 @@ const Home = () => {
                     <div className="container">
                         <div className="aem-Grid">
                             <div className="aem-Grid aem-Grid--12">
-                                <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--3 aem-GridColumn--default--3 product-category">
+                                <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--3 aem-GridColumn--default--3 product-category category-image">
                                     <div className="base">
-                                        <div className="category-image"></div>
+                                        <div className="category-image image-1"></div>
+                                        <div className="category-text">
+                                            <div className="category-title">Shop</div>
+                                            <div className="category-desc">Lorem ipsum dolor sit amet</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--3 aem-GridColumn--default--3">
+                                    <div className="base">
+                                        <div className="category-image image-2"></div>
                                         <div className="category-text">
                                             <div className="category-title">Shop Men</div>
                                             <div className="category-desc">Lorem ipsum dolor sit amet</div>
@@ -42,27 +54,18 @@ const Home = () => {
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--3 aem-GridColumn--default--3">
                                     <div className="base">
-                                        <div className="category-image"></div>
+                                        <div className="category-image image-3"></div>
                                         <div className="category-text">
-                                            <div className="category-title">Shop Men</div>
+                                            <div className="category-title">Shop Women</div>
                                             <div className="category-desc">Lorem ipsum dolor sit amet</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--3 aem-GridColumn--default--3">
                                     <div className="base">
-                                        <div className="category-image"></div>
+                                        <div className="category-image image-4"></div>
                                         <div className="category-text">
-                                            <div className="category-title">Shop Men</div>
-                                            <div className="category-desc">Lorem ipsum dolor sit amet</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--3 aem-GridColumn--default--3">
-                                    <div className="base">
-                                        <div className="category-image"></div>
-                                        <div className="category-text">
-                                            <div className="category-title">Shop Men</div>
+                                            <div className="category-title">Shop Jewellery</div>
                                             <div className="category-desc">Lorem ipsum dolor sit amet</div>
                                         </div>
                                     </div>
@@ -90,7 +93,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--6 image-area">
-                            <div className="signature-image-div"><img src={hero} alt="hero banner image" /></div>
+                            <div className="signature-image-div"><img src={leggings} alt="hero banner image" /></div>
                         </div>
                     </div>
                 </div>
@@ -102,7 +105,7 @@ const Home = () => {
                         <div className="aem-Grid aem-Grid--12">
                             <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--12 aem-GridColumn--default--8">
                                 <div className="image-div">
-                                    <img src={hero} alt="Hero Banner" />
+                                    <img src={adventure} alt="Adventure" />
                                 </div>
                             </div>
                             <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--12 aem-GridColumn--default--4">
