@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/adobecapstoneassignment/static/css/main.9eca9370.css",
-    "main.js": "/adobecapstoneassignment/static/js/main.fbec853f.js",
+    "main.css": "/adobecapstoneassignment/static/css/main.cbb4e309.css",
+    "main.js": "/adobecapstoneassignment/static/js/main.bf6eb82e.js",
     "static/media/hero-image.jpg": "/adobecapstoneassignment/static/media/hero-image.354ecf125eb18b45e770.jpg",
     "static/media/sliders.svg": "/adobecapstoneassignment/static/media/sliders.07a0e59562aded129aac7c8a5259c413.svg",
     "static/media/trash.svg": "/adobecapstoneassignment/static/media/trash.a3e697fde0ae7e80f40a3f3214ef433d.svg",
@@ -17,11 +17,11 @@
     "static/media/heart.svg": "/adobecapstoneassignment/static/media/heart.3b35352339d37da7c50b.svg",
     "static/media/edit.svg": "/adobecapstoneassignment/static/media/edit.d86fb5c57c99ad0d8312adf90283ac77.svg",
     "static/media/facebook.svg": "/adobecapstoneassignment/static/media/facebook.b5b54c5572636785078a.svg",
-    "main.9eca9370.css.map": "/adobecapstoneassignment/static/css/main.9eca9370.css.map",
-    "main.fbec853f.js.map": "/adobecapstoneassignment/static/js/main.fbec853f.js.map"
+    "main.cbb4e309.css.map": "/adobecapstoneassignment/static/css/main.cbb4e309.css.map",
+    "main.bf6eb82e.js.map": "/adobecapstoneassignment/static/js/main.bf6eb82e.js.map"
   },
   "entrypoints": [
-    "static/css/main.9eca9370.css",
-    "static/js/main.fbec853f.js"
+    "static/css/main.cbb4e309.css",
+    "static/js/main.bf6eb82e.js"
   ]
 }
