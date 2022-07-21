@@ -13,6 +13,7 @@ import Checkout from "./components/Checkout/chekcout";
 import Shipping from "./components/Shipping/shipping";
 import { Navigate } from "react-router-dom";
 import Payment from "./components/Payment/paymment";
+import Order from "./components/Order/order";
 
 const Router = () => (
   
@@ -29,7 +30,7 @@ const Router = () => (
           <Route path="checkout" element={<Checkout />} />
           <Route path="shipping" element={<Shipping />} />
           <Route path="payment" element={<Payment />} />
-          
+          <Route path="order" element={<Order />} />
         </Routes>
         <Footer />
     </App>

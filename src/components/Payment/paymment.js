@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import './styles/payment.scss';
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // import { useDispatch, useSelector } from 'react-redux';
 
 
@@ -9,11 +9,11 @@ const Payment = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     // const dispatch = useDispatch();
-    // let navigate = useNavigate();
+    let navigate = useNavigate();
 
     const onSubmit = (data) => {
         console.log(data);
-        //navigate("/payment");
+        navigate("/order");
     }
 
     return (
