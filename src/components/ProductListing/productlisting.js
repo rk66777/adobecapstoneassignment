@@ -4,19 +4,31 @@ import slider from "./images/sliders.svg";
 import uparrow from "./images/arrow-up.svg";
 import downarrow from "./images/arrow-down.svg";
 import { useSelector, useDispatch } from 'react-redux';
-import fetch_products from "../../state/action";
+import fetch_products, { quantity_action } from "../../state/action";
 import hero from "./images/hero-image.jpg";
 import { NavLink } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 const ProductListing = () => {
 
     const dispatch = useDispatch();
+    dispatch(quantity_action(0));
 
-    const products = useSelector(state => state.products);
-    console.log(products);
+    const items = useSelector(state => state.products.products);
+    console.log(items);
     useEffect(() => {
         dispatch(fetch_products())
     }, []);
+
+    const [searchParams] = useSearchParams();
+    const category = searchParams.get("category");
+    console.log("category",category);
+    let products = [];
+    if(category){
+        products = items.filter(prod => prod.category == category);
+    }else{
+        products = items;
+    }
 
     return (
         <section>
@@ -25,7 +37,7 @@ const ProductListing = () => {
                     <img src={hero} alt="Hero Banner" />
                 </div>
                 <div className="hero-content">
-                    <h1 className="hero-title">Women’s Outerwear</h1>
+                    <h1 className="hero-title">{category}</h1>
                     <div className="hero-band"></div>
                 </div>
             </section>
@@ -45,7 +57,7 @@ const ProductListing = () => {
                             <p className="filter-sort-text">Sort Products</p>
                         </div>
                     </div>
-                    <div className="filter-sort-result">30 Results</div>
+                    <div className="filter-sort-result">{products.length} Results</div>
                 </div>
                 <div className="products-container aem-Grid aem-Grid--12">
                     <div className="filter-desktop d-none d-lg-block aem-GridColumn aem-GridColumn--default--3">
@@ -143,7 +155,7 @@ const ProductListing = () => {
                     </div>
                     <div className="products aem-Grid aem-Grid--12 aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--9 aem-GridColumn--tablet--9">
                         <div className="desktop-sort-filter d-none d-lg-block">
-                            <div className="filter-sort-result">30 Results</div>
+                            <div className="filter-sort-result">{products.length} Results</div>
                             <div className="sort-by-latest"></div>
                         </div>
 

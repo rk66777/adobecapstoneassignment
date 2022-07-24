@@ -4,23 +4,50 @@ import edit from "./images/edit.svg";
 import heart from "./images/heart.svg";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addtocheckout_action } from "../../state/action";
+import { addtocheckout_action, quantity_action, summary_action } from "../../state/action";
 import { useDispatch } from 'react-redux';
 import './styles/cart.scss';
+import Quantity from "../quantity/quantity";
+import React, { useState } from "react";
 
 
 const Cart = () => {
+    const quantityVaalue = useSelector(state => state.quantity.quantity);
+
+    const [quantity, setQuantity] = useState(quantityVaalue);
+    const [subTotal, setSubTotal] = useState(0);
+    const [deliveryPrice, setDeliveryPrice] = useState(0);
+    const [total, setTotal] = useState(0);
+
     const cartProduct = useSelector(state => state.cart.cart);
     console.log(cartProduct);
+    const coupon = quantity > 0 ? 100 : 0;
+    const gift = quantity > 0 ? 100 : 0;
+    const tax = quantity > 0 ? 50 : 0;
 
     const dispatch = useDispatch();
     let navigate = useNavigate();
 
-    const checkout =(product) =>{
+    const checkout = (product) => {
+
+
         dispatch(addtocheckout_action(product));
+
         navigate("/checkout");
     }
-
+    const updateQuantity = (value) => {
+        setQuantity(value);
+        dispatch(quantity_action(value));
+        const summary = {
+            subTotal: subTotal,
+            coupon: coupon,
+            gift: gift,
+            tax: tax,
+            deliveryPrice: deliveryPrice,
+            total: total
+        };
+        dispatch(summary_action(summary));
+    }
     const CartDetails = () => {
         return (
             <>
@@ -30,7 +57,19 @@ const Cart = () => {
                     <div className="band"></div>
                 </div>
 
-                {cartProduct && cartProduct.length > 0 ? cartProduct.map((product) => {
+                {
+                cartProduct && cartProduct.length > 0 ? cartProduct.map((product) => {
+                    const subTotal = quantity * product.price;
+                    setSubTotal(subTotal);
+
+                    let deliveryPrice = 0;
+                    if(quantity > 0 && subTotal > 0 && subTotal <= 500){
+                        deliveryPrice = 100;
+                    }
+                    setDeliveryPrice(deliveryPrice);
+
+                    const total = subTotal +  coupon + gift+ tax + deliveryPrice;
+                    setTotal(total);
                     return (
                         <>
                             <div className="product-card-main d-lg-flex justify-content-between aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--8" >
@@ -46,6 +85,7 @@ const Cart = () => {
                                         <h6 className=" "> ${product.price}</h6>
                                     </div>
                                 </div>
+                                <Quantity quantity={quantity} updateQuantity={value => updateQuantity(value)} />
 
                                 <div className=" aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12" >
                                     <div className="categories">
@@ -60,12 +100,12 @@ const Cart = () => {
                             <div className="summary aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--4">
                                 <h5>Pricing Summary</h5>
                                 <div className="pricing-details">
-                                    <div><p>Subtotal</p><p>$388.00</p></div>
-                                    <div><p>Coupon</p><p>$388.00</p></div>
-                                    <div><p>Gift Card</p><p>$388.00</p></div>
-                                    <div><p>Estimated tax</p><p>$388.00</p></div>
-                                    <div><p>Estimated Shipping</p><p>$388.00</p></div>
-                                    <div className="pricing-total"><p>Estimated Total</p><p>$388.00</p></div>
+                                    <div><p>Subtotal</p><p>${subTotal}</p></div>
+                                    <div><p>Coupon</p><p>${coupon}</p></div>
+                                    <div><p>Gift Card</p><p>${gift}</p></div>
+                                    <div><p>Estimated tax</p><p>${tax}</p></div>
+                                    <div><p>Estimated Shipping</p><p>{deliveryPrice}</p></div>
+                                    <div className="pricing-total"><p>Estimated Total</p><p>${total}</p></div>
                                     <div className="btn-div"><button className="checkout btn btn-primary" onClick={ () => checkout(product)}>checkout</button></div>
                                 </div>
                             </div>

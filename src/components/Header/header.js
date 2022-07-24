@@ -1,6 +1,7 @@
 import React from "react";
 import './styles/header.scss';
 import logo from './images/venia-logo.png';
+import { NavLink } from 'react-router-dom';
 
 // export default function Header() {
 
@@ -17,7 +18,7 @@ const Header = () => {
                 <div className="header">
                     <nav className="navbar d-flex d-lg-none">
                         <i className="hamburger" id="hamburger" data-state="show"></i>
-                        <a className="nav-title no-underline" href="/">VENIA</a>
+                            <a className="nav-title no-underline" href="/">VENIA</a>
                         <div className="align-right">
                             <div className="cart-icon"></div>
                         </div>
@@ -27,10 +28,26 @@ const Header = () => {
                             <a className="nav-title no-underline" href="/">VENIA</a>
                         </div>
                         <ul className="menu">
-                            <li className="menu-item"><a href="/" className="item">Women</a></li>
-                            <li className="menu-item"><a href="/" className="item">Men</a></li>
-                            <li className="menu-item"><a href="/" className="item">Smart Gear</a></li>
-                            <li className="menu-item"><a href="/" className="item">Accessories</a></li>
+                            <li className="menu-item">
+                                <NavLink className="item" to="/productlisting?category=women's clothing">
+                                    Women
+                                </NavLink>
+                            </li>
+                            <li className="menu-item">
+                                <NavLink className="item" to="/productlisting?category=men's clothing">
+                                    Men
+                                </NavLink>
+                            </li>
+                            <li className="menu-item">
+                                <NavLink className="item" to="/productlisting?category=jewelery">
+                                Jewelery
+                                </NavLink>
+                            </li>
+                            <li className="menu-item">
+                                <NavLink className="item" to="/productlisting?category=electronics">
+                                Electronics
+                                </NavLink>
+                            </li>
                         </ul>
                         <div className="menu-right">
                             <div className="cart-icon"></div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import './styles/checkout.scss';
 import { checkout_action } from "../../state/action";
@@ -10,6 +10,9 @@ const Checkout = () => {
 
     const checkoutProduct = useSelector(state => state.checkout);
     console.log(checkoutProduct);
+
+    const summary = useSelector(state => state.summary);
+    console.log(summary);
 
     const dispatch = useDispatch();
     let navigate = useNavigate();
@@ -44,7 +47,7 @@ const Checkout = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="shipping-data">
+                            {/* <div className="shipping-data">
                                 <h3 className="my-10">1. Shipping Information</h3>
                                 <div className="d-flex flex-column flex-lg-row justify-content-lg-between my-10">
                                     <div className="input-div my-10 d-flex flex-column">
@@ -100,7 +103,7 @@ const Checkout = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="shipping-method">
                                 <p>2. Shipping Method</p>
                             </div>
@@ -119,14 +122,21 @@ const Checkout = () => {
                     </div>
                     <div className="summary">
                         <h5>Pricing Summary</h5>
-                        <div className="pricing-details">
-                            <div><p>Subtotal</p><p>$388.00</p></div>
-                            <div><p>Coupon</p><p>$388.00</p></div>
-                            <div><p>Gift Card</p><p>$388.00</p></div>
-                            <div><p>Estimated tax</p><p>$388.00</p></div>
-                            <div><p>Estimated Shipping</p><p>$388.00</p></div>
-                            <div className="pricing-total"><p>Estimated Total</p><p>$388.00</p></div>
-                        </div>
+                            {
+                                summary ? (                        
+                                <div className="pricing-details">
+
+                                    <div><p>Subtotal</p><p>${summary.subTotal}</p></div>
+                                    <div><p>Coupon</p><p>${summary.coupon}</p></div>
+                                    <div><p>Gift Card</p><p>${summary.gift}</p></div>
+                                    <div><p>Estimated tax</p><p>$${summary.tax}</p></div>
+                                    <div><p>Estimated Shipping</p><p>${summary.delivery}</p></div>
+                                    <div className="pricing-total"><p>Estimated Total</p><p>${summary.total}</p></div>
+                                    </div>
+
+                                ) : ''
+                            }
+                           
                     </div>
                 </div>
             </div>

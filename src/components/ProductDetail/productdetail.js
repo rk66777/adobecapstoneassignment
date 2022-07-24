@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import './styles/productdetail.scss';
 import { useNavigate } from "react-router-dom";
-import { addtocart_action } from "../../state/action";
+import { addtocart_action, quantity_action } from "../../state/action";
+import Quantity from "../quantity/quantity";
 
 const ProductDetail = () => {
 
+    const quantityVaalue = useSelector(state => state.quantity.quantity);
     const { id } = useParams();
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [quantity, setQuantity] = useState(quantityVaalue);
 
     const dispatch = useDispatch();
 
@@ -29,7 +32,10 @@ const ProductDetail = () => {
         getProduct();
 
     }, []);
-
+    const updateQuantity = (value) => {
+        setQuantity(value);
+        dispatch(quantity_action(value));
+    }
     const Loading = () => {
         return (
             <>Loading</>
@@ -77,6 +83,7 @@ const ProductDetail = () => {
                         <button className="btn btn-primary add-cart" onClick={ () => addProduct(product)} >
                             ADD TO CART
                         </button>
+                        <Quantity quantity={quantity} updateQuantity={value => updateQuantity(value)} />
 
                     </div>
                 </section>

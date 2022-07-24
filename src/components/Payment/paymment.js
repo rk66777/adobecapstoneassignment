@@ -2,17 +2,27 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import './styles/payment.scss';
 import { useNavigate } from "react-router-dom";
-// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { payment_action } from "../../state/action";
 
 
 const Payment = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    // const dispatch = useDispatch();
+    const chekoutDetails = useSelector(state => state.checkout.checkout);
+    console.log("chekoutDetails", chekoutDetails);
+    const checkOutFormData = chekoutDetails.length > 0 ?  chekoutDetails[0] : {};
+
+    const shippingDetails = useSelector(state => state.shipping.shipping);
+    console.log("shippingDetails", shippingDetails);
+    const shippingFormData = shippingDetails.length > 0 ?  shippingDetails[0] : {};
+
+    const dispatch = useDispatch();
     let navigate = useNavigate();
 
     const onSubmit = (data) => {
         console.log(data);
+        dispatch(payment_action(data));
         navigate("/order");
     }
 
@@ -26,17 +36,17 @@ const Payment = () => {
                     <div className="summary">
                         <h5 className="d-flex justify-content-between">Shipping Information<span className="link">edit</span></h5>
                         <div className="pricing-details">
-                            <div><p>email</p><p>address</p></div>
-                            <div><p>phone</p><p>zip</p></div>
+                            <div><p>{checkOutFormData.mail}</p><p>address</p></div>
+                            <div><p>{checkOutFormData.phonenumber}</p><p>zip</p></div>
                         </div>
                     </div>
 
                     <div className="summary my-10">
                         <h5 className="d-flex justify-content-between">Shipping Method<span className="link">edit</span></h5>
                         <div className="pricing-details">
-                            <div><p>standard Shipping</p></div>
-                            <div><p>Est. delivery in 4 - 8 business days</p></div>
-                            <div><p>Free</p></div>
+                            <div><p>{shippingFormData.ShippingMethod}</p></div>
+                            {/* <div><p>Est. delivery in 4 - 8 business days</p></div>
+                            <div><p>Free</p></div> */}
                         </div>
                     </div>
 

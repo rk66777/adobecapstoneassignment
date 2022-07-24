@@ -1,7 +1,23 @@
 import React from "react";
 import './styles/order.scss';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Order = () => {
+    const chekoutDetails = useSelector(state => state.checkout.checkout);
+    console.log("chekoutDetails", chekoutDetails);
+    const checkOutFormData = chekoutDetails.length > 0 ? chekoutDetails[0] : {};
+
+    const shippingDetails = useSelector(state => state.shipping.shipping);
+    console.log("shippingDetails", shippingDetails);
+    const shippingFormData = shippingDetails.length > 0 ? shippingDetails[0] : {};
+
+    const paymentDetails = useSelector(state => state.payment.payment);
+    console.log("paymentDetails", paymentDetails);
+    const paymentFormData = paymentDetails.length > 0 ? paymentDetails[0] : {};
+
+    const cartProduct = useSelector(state => state.cart.cart);
+    console.log("cartDetails", cartProduct);
+
     return (
         <section className="order aem-Grid">
             <div className="container aem-Grid aem-Grid--12">
@@ -13,26 +29,47 @@ const Order = () => {
                         <div className="summary">
                             <h5 className="d-flex justify-content-between">Shipping Information</h5>
                             <div className="pricing-details">
-                                <div><p>email</p><p>address</p></div>
-                                <div><p>phone</p><p>zip</p></div>
+                                <div><p>{checkOutFormData.mail}</p><p>address</p></div>
+                                <div><p>{checkOutFormData.phonenumber}</p><p>zip</p></div>
                             </div>
                         </div>
                         <div className="right">
                             <div className="summary my-10">
                                 <h5 className="d-flex justify-content-between">Shipping Method</h5>
                                 <div className="pricing-details">
-                                    <div><p>standard Shipping</p></div>
-                                    <div><p>Est. delivery in 4 - 8 business days</p></div>
-                                    <div><p>Free</p></div>
+                                    <div><p>{shippingFormData.ShippingMethod}</p></div>
+                                    {/* <div><p>Est. delivery in 4 - 8 business days</p></div>
+                                        <div><p>Free</p></div> */}
                                 </div>
                             </div>
                             <div className="summary my-10">
                                 <h5 className="d-flex justify-content-between">Payment Information</h5>
                                 <div className="pricing-details">
-                                    <div><p>Credit Card</p></div>
-                                    <div><p>Visa ending in 4567</p></div>
+                                    <div><p>{paymentFormData.creditCard}</p></div>
+                                    <div><p>{paymentFormData.cardnumber}</p></div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div className="cart-details">
+                        <div className="product-card-main d-lg-flex justify-content-between aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--8" >
+                            {cartProduct && cartProduct.length > 0 ? cartProduct.map((product, index) => {
+                                return (
+                                    <div className="product-card d-flex aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--12 aem-GridColumn--default--6" >
+                                        <div className="card-img">
+                                            <img src={product.image} className="card-img-top" alt={product.title} width="100%" />
+                                        </div>
+                                        <div className="description">
+                                            <h5>{product.title.substring(0, 25)}</h5>
+                                            <p>Size: Medium</p>
+                                            <p>Color : Storm</p>
+
+                                            <h6 className=" "> ${product.price}</h6>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                            ) : 'No Items in Cart to Display'}
                         </div>
                     </div>
                     <p className="my-10">You will also receive an email with the details and we will let you know when your order has shipped.</p>

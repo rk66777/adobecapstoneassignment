@@ -2,20 +2,29 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import './styles/shipping.scss';
 import { useNavigate } from "react-router-dom";
-// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { shipping_action } from "../../state/action";
 
 
 const Shipping = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    // const dispatch = useDispatch();
+    const chekoutDetails = useSelector(state => state.checkout.checkout);
+    console.log("chekoutDetails", chekoutDetails);
+
+    const checkOutFormData = chekoutDetails.length > 0 ?  chekoutDetails[0] : {};
+
+    const dispatch = useDispatch();
     let navigate = useNavigate();
 
     const onSubmit = (data) => {
         console.log(data);
+        dispatch(shipping_action(data));
+
         navigate("/payment");
     }
-
+    {
+        
     return (
         <section className="shipping aem-Grid">
             <div className="container aem-Grid aem-Grid--12">
@@ -25,10 +34,12 @@ const Shipping = () => {
                     <h2 className="sub-title my-10">Guest Checkout</h2>
                     <div className="summary">
                         <h5 className="d-flex justify-content-between">Shipping Information<span className="link">edit</span></h5>
-                        <div className="pricing-details">
-                            <div><p>email</p><p>address</p></div>
-                            <div><p>phone</p><p>zip</p></div>
-                        </div>
+                        
+
+                            <div className="pricing-details">
+                                <div><p>{checkOutFormData.mail}</p><p>address</p></div>
+                                <div><p>{checkOutFormData.phonenumber}</p><p>zip</p></div>
+                            </div>
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <h3 className="my-10">2. Shipping Method</h3>
@@ -75,6 +86,7 @@ const Shipping = () => {
             </div>
         </section>
     )
+                        }
 }
 
 export default Shipping;

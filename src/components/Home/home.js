@@ -5,12 +5,19 @@ import shopping from "./images/shopping.jfif";
 import adventure from "./images/adventure.jpg";
 import leggings from "./images/leggings.webp";
 import { useNavigate } from "react-router-dom";
+import fetch_products from "../../state/action";
+import { useDispatch } from 'react-redux';
 
 const Home = () => {
     let navigate = useNavigate();
         const shop =() =>{
             navigate("/productlisting");
         }
+        const dispatch = useDispatch();
+
+        // useEffect(() => {
+        //     dispatch(fetch_products())
+        // }, []);
     return (
         <section className="home">
             <section className="hero-banner">

@@ -31,4 +31,31 @@ export const  checkout_action= (res) => {
     }
 }
 
+export const  shipping_action= (res) => {
+    return{
+        type: 'SHIPPING_DATA',
+        payload: res
+    }
+}
+
+export const  payment_action= (res) => {
+    return{
+        type: 'PAYMENT_DATA',
+        payload: res
+    }
+}
+
+export const  quantity_action= (res) => {
+    return{
+        type: 'QUANTITY_DATA',
+        payload: res
+    }
+}
+export const summary_action= (res) => {
+    return{
+        type: 'SUMMARY_DATA',
+        payload: res
+    }
+}
+
 export default fetch_products;
