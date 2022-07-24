@@ -103,15 +103,16 @@ const Checkout = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <input type="submit" value="CONTINUE TO SHIPPING" className="btn btn-outline mobile-btn"/>
                             </div>
                             <div className="shipping-method">
                                 <p>2. Shipping Method</p>
                             </div>
-                            <div className="payment-info">
+                            <div className="payment-info mb-30">
                                 <p>3. Payment Information</p>
                             </div>
                         </div>
-                        <input type="submit" value="CONTINUE TO SHIPPING" className="btn btn-outline mobile-btn"/>
+                        
                         
                     </form>
                 </div>

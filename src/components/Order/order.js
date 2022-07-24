@@ -52,21 +52,24 @@ const Order = () => {
                         </div>
                     </div>
                     <div className="cart-details">
+                        <div>{cartProduct.length} Items in your order</div>
                         <div className="product-card-main d-lg-flex justify-content-between aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--8" >
                             {cartProduct && cartProduct.length > 0 ? cartProduct.map((product, index) => {
                                 return (
-                                    <div className="product-card d-flex aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--12 aem-GridColumn--default--6" >
-                                        <div className="card-img">
-                                            <img src={product.image} className="card-img-top" alt={product.title} width="100%" />
-                                        </div>
-                                        <div className="description">
-                                            <h5>{product.title.substring(0, 25)}</h5>
-                                            <p>Size: Medium</p>
-                                            <p>Color : Storm</p>
+                                    <>
+                                        <div className="product-card d-flex aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--12 aem-GridColumn--default--6" >
+                                            <div className="card-img mr-lg-30">
+                                                <img src={product.image} className="card-img-top" alt={product.title} width="100%" />
+                                            </div>
+                                            <div className="description">
+                                                <h5>{product.title.substring(0, 25)}</h5>
+                                                <p>Size: Medium</p>
+                                                <p>Color : Storm</p>
 
-                                            <h6 className=" "> ${product.price}</h6>
+                                                <h6 className=" "> ${product.price}</h6>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </>
                                 )
                             }
                             ) : 'No Items in Cart to Display'}

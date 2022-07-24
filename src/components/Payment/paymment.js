@@ -36,8 +36,8 @@ const Payment = () => {
                     <div className="summary">
                         <h5 className="d-flex justify-content-between">Shipping Information<span className="link">edit</span></h5>
                         <div className="pricing-details">
-                            <div><p>{checkOutFormData.mail}</p><p>address</p></div>
-                            <div><p>{checkOutFormData.phonenumber}</p><p>zip</p></div>
+                            <div><p>{checkOutFormData.mail}</p><p>{checkOutFormData.address}{checkOutFormData.address2}</p></div>
+                            <div><p>{checkOutFormData.phonenumber}</p><p>{checkOutFormData.city}</p></div>
                         </div>
                     </div>
 
@@ -53,9 +53,9 @@ const Payment = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <h3 className="my-10">3. Payment Information</h3>
                         <div className="ship-method my-10">
-                            <input type="radio" className='creditCard' id='creditCard' name='creditCard' {...register("creditCard", {
+                            {/* <input type="radio" className='creditCard' id='creditCard' name='creditCard' {...register("creditCard", {
                                 required: "Required"
-                            })} />
+                            })} /> */}
                             <label htmlFor="creditCard"> Credit Card</label>
                         </div>
                         <div className="input-div my-10 d-flex flex-column">
@@ -65,18 +65,18 @@ const Payment = () => {
                         </div>
                         <div className="input-div my-10 d-flex flex-column">
                             <label className="label-text">Credit Card Number</label>
-                            <input type="text" {...register("cardnumber", { required: "Required" })} />
+                            <input type="number" {...register("cardnumber", { required: "Required" })} />
                             <p>{errors.cardnumber?.message}</p>
                         </div>
                         <div className="d-flex justify-content-between card-div">
                             <div className="expiry-div my-10 d-flex flex-column">
                                 <label className="label-text">Expiration Date</label>
-                                <input type="text" {...register("expirydate", { required: "Required" })} />
+                                <input type="date" {...register("expirydate", { required: "Required" })} />
                                 <p>{errors.expirydate?.message}</p>
                             </div>
                             <div className="cvv-div my-10 d-flex flex-column">
                                 <label className="label-text">CVV</label>
-                                <input type="text" {...register("cvv", { required: "Required" })} />
+                                <input type="number" {...register("cvv", { required: "Required" })} />
                                 <p>{errors.cvv?.message}</p>
                             </div>
                         </div>

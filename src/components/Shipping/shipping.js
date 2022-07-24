@@ -65,7 +65,7 @@ const Shipping = () => {
 
                         <input type="submit" value="CONTINUE TO PAYMENT" className="btn btn-outline mobile-btn" />
 
-                        <div className="payment-info">
+                        <div className="payment-info mb-30">
                             <p>3. Payment Information</p>
                         </div>
                     </form>

@@ -84,6 +84,14 @@
     .input-div{
         width: 50%;
     }
+    input{
+        border: 2px solid var(--gray-l2);
+        border-radius: 8px;
+        height: 38px;
+    }
+    input.btn-outline{
+        border-color: var(--primary-brand);
+    }
     .card-div{
         width: 50%;
         .expiry-div{

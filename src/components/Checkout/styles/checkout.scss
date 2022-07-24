@@ -55,7 +55,17 @@
         justify-content: center;
     }
     .shipping-method{
-        border-bottom: 1px solid #72777F;
+        border-top: 1px solid #d1d3d6;
+        color: var(--unnamed-color-72777F);
+        padding: 24px 0;
+        text-align: left;
+    }
+    .payment-info{
+        border-top: 1px solid #d1d3d6;
+        border-bottom: 1px solid #d1d3d6;
+        color: var(--unnamed-color-72777F);
+        padding: 24px 0;
+        text-align: left;
     }
     .summary {
         border: 1px solid #D1D3D6;
@@ -120,6 +130,12 @@
         input,
         select {
             width: 300px;
+            border: 2px solid var(--gray-l2);
+            border-radius: 8px;
+            height: 38px;
+        }
+        input.btn-outline{
+            border-color: var(--primary-brand);
         }
 
         .state {

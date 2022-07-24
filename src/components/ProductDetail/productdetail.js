@@ -53,14 +53,14 @@ const ProductDetail = () => {
         return (
             <div className="aem-Grid">
                 <section className="aem-Grid aem-Grid--12">
-                    <div className="aem-GridColumn aem-GridColumn--default--3">
+                    <div className="aem-GridColumn aem-GridColumn--default--3 mt-20">
                         <ul className="product-list d-none d-lg-block">
                             <li> <img src={product.image} alt={product.title} />  </li>
                             <li> <img src={product.image} alt={product.title} />  </li>
                             <li> <img src={product.image} alt={product.title} />  </li>
                         </ul>
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--12 aem-GridColumn--default--4">
+                    <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--12 aem-GridColumn--default--4 mt-20 mt-lg-30">
                         <h5 className="breadcrumb text-capitalize d-lg-none">
                             Home  / {product.category} /
                         </h5>
@@ -80,21 +80,20 @@ const ProductDetail = () => {
 
                         <p className="product-desc"> {product.description}</p>
                         <hr />
+                        <Quantity quantity={quantity} updateQuantity={value => updateQuantity(value)} />
                         <button className="btn btn-primary add-cart" onClick={ () => addProduct(product)} >
                             ADD TO CART
                         </button>
-                        <Quantity quantity={quantity} updateQuantity={value => updateQuantity(value)} />
+                        
 
                     </div>
                 </section>
                 <section className="aem-Grid aem-Grid--12">
-                    <div className="info aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--7">
-                        <h3 className="product-title text-center">{product.title}</h3>
+                    <div className="info aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--10">
+                        <h3 className="product-title">{product.title}</h3>
                         <p className="product-desc"> {product.description}</p>
                     </div>
-                    <div className="info aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--5">
-                        <h3 className="product-title">Details</h3>
-                    </div>
+                    
                     
                 </section>
             </div>
