@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/adobecapstoneassignment/static/css/main.483e3a2d.css",
-    "main.js": "/adobecapstoneassignment/static/js/main.2b59dd54.js",
+    "main.css": "/adobecapstoneassignment/static/css/main.f5c704fa.css",
+    "main.js": "/adobecapstoneassignment/static/js/main.b04d8524.js",
     "static/media/hero-image.jpg": "/adobecapstoneassignment/static/media/hero-image.354ecf125eb18b45e770.jpg",
     "static/media/adventure.jpg": "/adobecapstoneassignment/static/media/adventure.1e2c324f71d4df875ee4.jpg",
     "static/media/women.jpg": "/adobecapstoneassignment/static/media/women.902105bb0e0ba99c6de2.jpg",
@@ -15,7 +15,7 @@
     "index.html": "/adobecapstoneassignment/index.html",
     "static/media/instagram.svg": "/adobecapstoneassignment/static/media/instagram.098205e681981cff2dea.svg",
     "static/media/plus-circle.svg": "/adobecapstoneassignment/static/media/plus-circle.f0e745c0b64b3e549aae3a3efe9664bf.svg",
-    "static/media/shopping-bag.svg": "/adobecapstoneassignment/static/media/shopping-bag.7865a20d4f73677ab514.svg",
+    "static/media/shopping-bag-white.svg": "/adobecapstoneassignment/static/media/shopping-bag-white.c1b615f1af44b5716ea3.svg",
     "static/media/search.svg": "/adobecapstoneassignment/static/media/search.2a57860d6510d9d8509b.svg",
     "static/media/arrow-up.svg": "/adobecapstoneassignment/static/media/arrow-up.bffb5a388e9ce654e32b9665d1dbed6d.svg",
     "static/media/user.svg": "/adobecapstoneassignment/static/media/user.91483d78eeba2c3d646d.svg",
@@ -25,11 +25,11 @@
     "static/media/heart.svg": "/adobecapstoneassignment/static/media/heart.3b35352339d37da7c50b.svg",
     "static/media/edit.svg": "/adobecapstoneassignment/static/media/edit.d86fb5c57c99ad0d8312adf90283ac77.svg",
     "static/media/facebook.svg": "/adobecapstoneassignment/static/media/facebook.b5b54c5572636785078a.svg",
-    "main.483e3a2d.css.map": "/adobecapstoneassignment/static/css/main.483e3a2d.css.map",
-    "main.2b59dd54.js.map": "/adobecapstoneassignment/static/js/main.2b59dd54.js.map"
+    "main.f5c704fa.css.map": "/adobecapstoneassignment/static/css/main.f5c704fa.css.map",
+    "main.b04d8524.js.map": "/adobecapstoneassignment/static/js/main.b04d8524.js.map"
   },
   "entrypoints": [
-    "static/css/main.483e3a2d.css",
-    "static/js/main.2b59dd54.js"
+    "static/css/main.f5c704fa.css",
+    "static/js/main.b04d8524.js"
   ]
 }
