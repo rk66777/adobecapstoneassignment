@@ -8,6 +8,14 @@
 }
 
 .cart {
+    .quantity-section {
+        .count-wrapper {
+            input {
+                width: 87px;
+            }
+        }
+    }
+
     .headline {
         font: normal normal 600 36px/45px Source Serif Pro;
         margin: 10px 0;
@@ -30,66 +38,75 @@
             object-fit: contain;
         }
     }
-    .product-card-main{
+
+    .product-card-main {
         margin-top: 20px;
     }
-    .description{
-        h5{
+
+    .description {
+        h5 {
             font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-25) var(--unnamed-font-family-muli);
             margin-bottom: 10px;
         }
-        
-        p{
+
+        p {
             font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
             margin-bottom: 10px;
         }
     }
-    .icon-img{
+
+    .icon-img {
         margin-right: 10px;
     }
 
-    .summary{
+    .summary {
         border: 1px solid #D1D3D6;
         padding: 25px;
         margin-bottom: 30px;
-        h5{
+
+        h5 {
             font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-muli);
             color: var(--unnamed-color-172026);
             font: normal normal 600 20px/30px Mulish;
             margin-bottom: 10px;
         }
-        .pricing-details{
-            div{
+
+        .pricing-details {
+            div {
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 10px;
-                p{
+
+                p {
                     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
                     font: normal normal normal 16px/24px Mulish;
                 }
-                
+
             }
-            .btn-div{
+
+            .btn-div {
                 justify-content: center;
-                button{
+
+                button {
                     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-14)/16px var(--unnamed-font-family-muli);
                     font: normal normal bold 14px/16px Mulish;
                 }
             }
-            .pricing-total{
-                p{
+
+            .pricing-total {
+                p {
                     color: var(--unnamed-color-172026);
                     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
                     font: normal normal bold 16px/24px Mulish;
                 }
-                
+
             }
         }
     }
 }
 
-@include desktop{
-    .product-card-main{
+@include desktop {
+    .product-card-main {
         padding-right: 20px;
     }
 }

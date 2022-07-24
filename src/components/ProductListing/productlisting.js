@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import './styles/productlisting.css';
+import './styles/productlisting.scss';
 import slider from "./images/sliders.svg";
 import uparrow from "./images/arrow-up.svg";
 import downarrow from "./images/arrow-down.svg";
@@ -22,11 +22,11 @@ const ProductListing = () => {
 
     const [searchParams] = useSearchParams();
     const category = searchParams.get("category");
-    console.log("category",category);
+    console.log("category", category);
     let products = [];
-    if(category){
+    if (category) {
         products = items.filter(prod => prod.category == category);
-    }else{
+    } else {
         products = items;
     }
 
@@ -42,7 +42,7 @@ const ProductListing = () => {
                 </div>
             </section>
             <section className="Product-listing-container container">
-                <div className="breadcrumb d-lg-none">Clothing / Women’s / Outerwear</div>
+                <div className="breadcrumb d-lg-none">{category}</div>
                 <div className="filter-sort d-lg-none">
                     <div className="d-flex justify-content-between">
                         <div className="filter d-flex justify-content-center">
@@ -61,43 +61,36 @@ const ProductListing = () => {
                 </div>
                 <div className="products-container aem-Grid aem-Grid--12">
                     <div className="filter-desktop d-none d-lg-block aem-GridColumn aem-GridColumn--default--3">
-                        <div className="breadcrumb">Clothing / Women’s / Outerwear</div>
+                        <div className="breadcrumb">{category}</div>
                         <h2 className="filter-title">Filters</h2>
                         <hr className="filter-line" />
                         <div className="filter-attribute">
-                            <h3 className="attribute">Attribute</h3>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
+                            <h3 className="attribute">Categories</h3>
+                            <NavLink to="/productlisting?category=jewelery">
+                                <div className="option-check">
+                                    <span className="option">Jewellery</span>
+                                </div>
+                            </NavLink>
+                            <NavLink to="/productlisting?category=electronics">
+                                <div className="option-check">
+                                    <span className="option">Electronics</span>
+                                </div>
+                            </NavLink>
+                            <NavLink to="/productlisting?category=men's clothing">
+                                <div className="option-check">
+                                    <span className="option">Men's Clothing</span>
+                                </div>
+                            </NavLink>
+                            <NavLink to="/productlisting?category=women's clothing">
+                                <div className="option-check">
+                                    <span className="option">Women's Clothing</span>
+                                </div>
+                            </NavLink>
                         </div>
                         <hr className="filter-line" />
 
-                        <div className="filter-attribute">
-                            <h3 className="attribute">Attribute</h3>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
-                        </div>
-                        <hr className="filter-line" />
 
+                        {/* 
                         <div className="colors-section">
                             <h3 className="color-title">Color</h3>
                             <div className="aem-Grid aem-Grid--12">
@@ -133,24 +126,9 @@ const ProductListing = () => {
                                 </div>
                             </div>
                         </div>
-                        <hr className="filter-line" />
+                        <hr className="filter-line" /> */}
 
-                        <div className="filter-attribute">
-                            <h3 className="attribute">Attribute</h3>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
-                            <div className="option-check">
-                                <span className="option">Option</span>
-                            </div>
-                        </div>
-                        <hr className="filter-line" />
+
 
                     </div>
                     <div className="products aem-Grid aem-Grid--12 aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--9 aem-GridColumn--tablet--9">

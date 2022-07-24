@@ -1,4 +1,7 @@
 @import './mixins';
+@import '../../base/style.scss';
+@import '../../base/variables';
+@import '../../base/defaultstyle';
 
 .quantity-section {
     margin-top: var(--unnamed-pixel-16);
@@ -23,11 +26,18 @@
         }
 
         input {
-            width: 90px;
+            width: 150px;
             height: var(--unnamed-pixel-28);
-            border-radius: var(--unnamed-pixel-8);
+            background: var(--white) 0 0 no-repeat padding-box;
+            border: 2px solid var(--gray-m1);
+            border-radius: 8px;
+            color: var(--unnamed-color-172026);
+            font: var(--unnamed-font-style-normal) normal 600 var(--unnamed-font-size-16)/var(--unnamed-line-spacing-20) var(--unnamed-font-family-muli);
+            height: 40px;
+            letter-spacing: .32px;
+            margin: 0 12px;
+            opacity: 1;
             text-align: center;
-            border: var(--unnamed-border-solid);
         }
 
 

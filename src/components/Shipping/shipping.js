@@ -37,8 +37,8 @@ const Shipping = () => {
                         
 
                             <div className="pricing-details">
-                                <div><p>{checkOutFormData.mail}</p><p>address</p></div>
-                                <div><p>{checkOutFormData.phonenumber}</p><p>zip</p></div>
+                                <div><p>{checkOutFormData.mail}</p><p>{checkOutFormData.address}{checkOutFormData.address2}</p></div>
+                                <div><p>{checkOutFormData.phonenumber}</p><p>{checkOutFormData.city}</p></div>
                             </div>
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -63,7 +63,7 @@ const Shipping = () => {
                             <label htmlFor="nextDayDeliver"> Next Day Delivery (Next business days via FedEx) $53.61</label>
                         </div>
 
-                        <input type="submit" className="btn btn-outline mobile-btn" />
+                        <input type="submit" value="CONTINUE TO PAYMENT" className="btn btn-outline mobile-btn" />
 
                         <div className="payment-info">
                             <p>3. Payment Information</p>

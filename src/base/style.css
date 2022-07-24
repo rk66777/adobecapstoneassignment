@@ -1,9 +1,9 @@
 :root {
   /* Colors: */
-  --primary-d1: #172BC4;
-  --primary-m1: #336DFF;
-  --primary-brand: #1F39FF;
-  --primary-l1: #3D84FF;
+  --primary-d1: #FF8243;
+  --primary-m1: #FDA65D;
+  --primary-brand: #E26A2C;
+  --primary-l1: #FFD07F;
   --gray-d2: #181C24;
   --gray-d1: #535965;
   --gray-m1: #91959C;
@@ -83,7 +83,7 @@
 }
 
 .regular-heading-xl-24- {
-  font-family: var(--unnamed-font-family-Muli);
+  font-family: var(--unnamed-font-family-muli);
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-600);
   font-size: var(--unnamed-font-size-24);
@@ -93,7 +93,7 @@
 }
 
 .regular-heading-l-20- {
-  font-family: var(--unnamed-font-family-Muli);
+  font-family: var(--unnamed-font-family-muli);
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-600);
   font-size: var(--unnamed-font-size-20);
@@ -103,7 +103,7 @@
 }
 
 .regular-heading-m-16- {
-  font-family: var(--unnamed-font-family-Muli);
+  font-family: var(--unnamed-font-family-muli);
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-600);
   font-size: var(--unnamed-font-size-16);
@@ -113,7 +113,7 @@
 }
 
 .regular-heading-s-14- {
-  font-family: var(--unnamed-font-family-Muli);
+  font-family: var(--unnamed-font-family-muli);
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-bold);
   font-size: var(--unnamed-font-size-14);
@@ -123,7 +123,7 @@
 }
 
 .regular-body-l-20- {
-  font-family: var(--unnamed-font-family-Muli);
+  font-family: var(--unnamed-font-family-muli);
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-normal);
   font-size: var(--unnamed-font-size-20);
@@ -133,7 +133,7 @@
 }
 
 .regualr-body-m-16- {
-  font-family: var(--unnamed-font-family-Muli);
+  font-family: var(--unnamed-font-family-muli);
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-normal);
   font-size: var(--unnamed-font-size-16);
@@ -143,7 +143,7 @@
 }
 
 .regular-body-s-14- {
-  font-family: var(--unnamed-font-family-Muli);
+  font-family: var(--unnamed-font-family-muli);
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-normal);
   font-size: var(--unnamed-font-size-14);
@@ -153,7 +153,7 @@
 }
 
 .blockquote {
-  font-family: var(--unnamed-font-family-Muli);
+  font-family: var(--unnamed-font-family-muli);
   font-style: var(--unnamed-font-style-italic);
   font-weight: var(--unnamed-font-weight-normal);
   font-size: var(--unnamed-font-size-20);
@@ -163,7 +163,7 @@
 }
 
 .numbered-list {
-  font-family: var(--unnamed-font-family-Muli);
+  font-family: var(--unnamed-font-family-muli);
   font-style: var(--unnamed-font-style-normal);
   font-weight: var(--unnamed-font-weight-normal);
   font-size: var(--unnamed-font-size-16);
@@ -185,6 +185,10 @@
   display: flex;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 .justify-content-center {
   justify-content: center;
 }
@@ -199,6 +203,10 @@
 
 .align-items-end {
   align-items: flex-end;
+}
+
+.align-items-baseline {
+  align-items: baseline;
 }
 
 .d-none {
@@ -222,27 +230,69 @@
   border-color: var(--primary-brand);
   color: var(--white);
   text-transform: uppercase;
-  border-radius: 28px;
+  border-radius: 0;
+  box-shadow: 0px 3px 6px rgba(57, 55, 55, 0.1607843137);
+}
+
+.btn-outline {
+  border-color: var(--primary-brand);
+  color: var(--primary-brand);
+  background-color: transparent;
 }
 
 .text-center {
   text-align: center;
 }
 
+.btn {
+  width: 200px;
+  height: 40px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.my-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 @media (min-width: 1024px) {
   .container {
     padding: 0 100px;
   }
-
   .d-lg-block {
     display: block;
   }
-
   .d-lg-none {
     display: none;
   }
-
   .d-lg-flex {
     display: flex !important;
+  }
+  .flex-lg-row {
+    flex-direction: row;
+  }
+  .align-items-lg-baseline {
+    align-items: baseline;
+  }
+  .text-lg-left {
+    text-align: left;
+  }
+  .mb-lg-0 {
+    margin-bottom: 0;
+  }
+  .justify-content-lg-between {
+    justify-content: space-between;
+  }
+  .mr-lg-30 {
+    margin-right: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

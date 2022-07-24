@@ -81,7 +81,7 @@ const Payment = () => {
                             </div>
                         </div>
 
-                        <input type="submit" className="btn btn-outline mobile-btn" />
+                        <input type="submit" value="PLACE ORDER" className="btn btn-outline mobile-btn" />
 
 
                     </form>

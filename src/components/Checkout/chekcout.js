@@ -47,7 +47,7 @@ const Checkout = () => {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="shipping-data">
+                            <div className="shipping-data">
                                 <h3 className="my-10">1. Shipping Information</h3>
                                 <div className="d-flex flex-column flex-lg-row justify-content-lg-between my-10">
                                     <div className="input-div my-10 d-flex flex-column">
@@ -103,7 +103,7 @@ const Checkout = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div> */}
+                            </div>
                             <div className="shipping-method">
                                 <p>2. Shipping Method</p>
                             </div>
@@ -111,7 +111,7 @@ const Checkout = () => {
                                 <p>3. Payment Information</p>
                             </div>
                         </div>
-                        <input type="submit" className="btn btn-outline mobile-btn"/>
+                        <input type="submit" value="CONTINUE TO SHIPPING" className="btn btn-outline mobile-btn"/>
                         
                     </form>
                 </div>
