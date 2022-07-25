@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import './styles/checkout.scss';
 import { checkout_action } from "../../state/action";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Summary from "../Summary/summary";
 
 const Checkout = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-
-    const checkoutProduct = useSelector(state => state.checkout);
-
-    const summary = useSelector(state => state.summary);
 
     const dispatch = useDispatch();
     let navigate = useNavigate();

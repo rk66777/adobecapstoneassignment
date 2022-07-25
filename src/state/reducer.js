@@ -1,7 +1,7 @@
 import {cloneDeep} from 'lodash';
 
 const initialState = {
-  products: [], cart: [], checkout: [], shipping: [], payment: [], quantity: 1,summary: []
+  products: [], cart: [], checkout: [], shipping: [], payment: [], quantity: 1, summary: []
 }
 
 const productReducer = (state=initialState, { type, payload }) => {

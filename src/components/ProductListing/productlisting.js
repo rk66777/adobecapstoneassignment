@@ -21,12 +21,13 @@ const ProductListing = () => {
     }, []);
 
     const [searchParams] = useSearchParams();
-    const category = searchParams.get("category");
+    let category = searchParams.get("category");
     let products = [];
     if (category) {
         products = items.filter(prod => prod.category == category);
     } else {
         products = items;
+        category = "Shopping";
     }
 
     return (

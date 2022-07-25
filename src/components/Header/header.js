@@ -1,6 +1,6 @@
 import React from "react";
 import './styles/header.scss';
-import logo from './images/venia-logo.png';
+// import logo from './images/venia-logo.png';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {

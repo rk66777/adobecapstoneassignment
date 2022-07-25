@@ -1,6 +1,6 @@
 import React from "react";
 import './styles/order.scss';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const Order = () => {
     const chekoutDetails = useSelector(state => state.checkout.checkout);
@@ -34,8 +34,6 @@ const Order = () => {
                                 <h5 className="d-flex justify-content-between">Shipping Method</h5>
                                 <div className="pricing-details">
                                     <div><p>{shippingFormData.ShippingMethod}</p></div>
-                                    {/* <div><p>Est. delivery in 4 - 8 business days</p></div>
-                                        <div><p>Free</p></div> */}
                                 </div>
                             </div>
                             <div className="summary my-10">

@@ -1,19 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './Styles/home.scss';
-import hero from "./images/hero-image.jpg";
 import shopping from "./images/shopping.jfif";
 import adventure from "./images/adventure.jpg";
 import leggings from "./images/leggings.webp";
 import { useNavigate } from "react-router-dom";
-import fetch_products from "../../state/action";
-import { useDispatch } from 'react-redux';
 
 const Home = () => {
     let navigate = useNavigate();
     const shop = () => {
         navigate("/productlisting");
     }
-    const dispatch = useDispatch();
+
     return (
         <section className="home">
             <section className="hero-banner">
@@ -29,7 +26,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--phone--0 aem-GridColumn--default--6 hero-desktop-image">
-                            <div className="desktop-image-div"><img src={shopping} alt="hero banner image" /></div>
+                            <div className="desktop-image-div"><img src={shopping} alt="hero banner" /></div>
                         </div>
                     </div>
                 </div>
@@ -96,7 +93,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--6 image-area">
-                            <div className="signature-image-div"><img src={leggings} alt="hero banner image" /></div>
+                            <div className="signature-image-div"><img src={leggings} alt="hero banner" /></div>
                         </div>
                     </div>
                 </div>

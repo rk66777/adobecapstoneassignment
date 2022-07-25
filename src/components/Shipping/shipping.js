@@ -8,7 +8,7 @@ import Summary from "../Summary/summary";
 
 
 const Shipping = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const chekoutDetails = useSelector(state => state.checkout.checkout);
 
