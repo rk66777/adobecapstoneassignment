@@ -4,6 +4,7 @@ import './styles/shipping.scss';
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { shipping_action } from "../../state/action";
+import Summary from "../Summary/summary";
 
 
 const Shipping = () => {
@@ -74,12 +75,7 @@ const Shipping = () => {
                     <div className="summary">
                         <h5>Pricing Summary</h5>
                         <div className="pricing-details">
-                            <div><p>Subtotal</p><p>$388.00</p></div>
-                            <div><p>Coupon</p><p>$388.00</p></div>
-                            <div><p>Gift Card</p><p>$388.00</p></div>
-                            <div><p>Estimated tax</p><p>$388.00</p></div>
-                            <div><p>Estimated Shipping</p><p>$388.00</p></div>
-                            <div className="pricing-total"><p>Estimated Total</p><p>$388.00</p></div>
+                            <Summary/>
                         </div>
                     </div>
                 </div>

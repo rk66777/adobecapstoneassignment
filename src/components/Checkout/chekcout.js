@@ -4,6 +4,7 @@ import './styles/checkout.scss';
 import { checkout_action } from "../../state/action";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
+import Summary from "../Summary/summary";
 
 const Checkout = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -124,18 +125,11 @@ const Checkout = () => {
                     <div className="summary">
                         <h5>Pricing Summary</h5>
                             {
-                                summary ? (                        
                                 <div className="pricing-details">
 
-                                    <div><p>Subtotal</p><p>${summary.subTotal}</p></div>
-                                    <div><p>Coupon</p><p>${summary.coupon}</p></div>
-                                    <div><p>Gift Card</p><p>${summary.gift}</p></div>
-                                    <div><p>Estimated tax</p><p>$${summary.tax}</p></div>
-                                    <div><p>Estimated Shipping</p><p>${summary.delivery}</p></div>
-                                    <div className="pricing-total"><p>Estimated Total</p><p>${summary.total}</p></div>
-                                    </div>
+                                    <Summary/>
+                                </div>
 
-                                ) : ''
                             }
                            
                     </div>

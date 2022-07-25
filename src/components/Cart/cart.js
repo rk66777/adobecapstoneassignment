@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import './styles/cart.scss';
 import Quantity from "../quantity/quantity";
 import React, { useState } from "react";
+import Summary from "../Summary/summary";
 
 
 const Cart = () => {
@@ -100,16 +101,12 @@ const Cart = () => {
                             <div className="summary aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--4">
                                 <h5>Pricing Summary</h5>
                                 <div className="pricing-details">
-                                    <div><p>Subtotal</p><p>${subTotal}</p></div>
-                                    <div><p>Coupon</p><p>${coupon}</p></div>
-                                    <div><p>Gift Card</p><p>${gift}</p></div>
-                                    <div><p>Estimated tax</p><p>${tax}</p></div>
-                                    <div><p>Estimated Shipping</p><p>{deliveryPrice}</p></div>
-                                    <div className="pricing-total"><p>Estimated Total</p><p>${total}</p></div>
+                                    <Summary/>
                                     <div className="btn-div"><button className="checkout btn btn-primary" onClick={ () => checkout(product)}>checkout</button></div>
                                 </div>
                             </div>
 
+                            
 
                         </>
                     )
