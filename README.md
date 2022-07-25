@@ -1,5 +1,16 @@
 # Getting Started with Create React App
 
+**Lighthouse Report:**
+
+**Desktop:**
+
+![capstoneDesktopLighthouse](https://user-images.githubusercontent.com/105698426/180724935-73fa333d-7d3c-4b08-81d5-2fd5ee018543.PNG)
+
+**Mobile:**
+
+![capstoneMobileLighthouse](https://user-images.githubusercontent.com/105698426/180725311-cd5c89ef-fba6-4d62-896d-77a1c7ad687a.PNG)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -39,11 +50,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-
-Lighthouse Report:
-
-Desktop:
-image.png
-
-Mobile:
-image.png
