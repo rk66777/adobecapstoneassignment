@@ -43,7 +43,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 Lighthouse Report:
 
 Desktop:
-image.png
+![capstoneDesktopLighthouse](https://user-images.githubusercontent.com/105698426/180724935-73fa333d-7d3c-4b08-81d5-2fd5ee018543.PNG)
 
 Mobile:
-image.png
+![capstoneMobileLighthouse](https://user-images.githubusercontent.com/105698426/180725311-cd5c89ef-fba6-4d62-896d-77a1c7ad687a.PNG)
