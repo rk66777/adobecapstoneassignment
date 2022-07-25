@@ -14,6 +14,7 @@ import Shipping from "./components/Shipping/shipping";
 import { Navigate } from "react-router-dom";
 import Payment from "./components/Payment/paymment";
 import Order from "./components/Order/order";
+import PageNotFound from "./components/PageNotFound/pageNotFound";
 
 const Router = () => (
   
@@ -31,6 +32,7 @@ const Router = () => (
           <Route path="shipping" element={<Shipping />} />
           <Route path="payment" element={<Payment />} />
           <Route path="order" element={<Order />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
     </App>
