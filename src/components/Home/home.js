@@ -10,14 +10,10 @@ import { useDispatch } from 'react-redux';
 
 const Home = () => {
     let navigate = useNavigate();
-        const shop =() =>{
-            navigate("/productlisting");
-        }
-        const dispatch = useDispatch();
-
-        // useEffect(() => {
-        //     dispatch(fetch_products())
-        // }, []);
+    const shop = () => {
+        navigate("/productlisting");
+    }
+    const dispatch = useDispatch();
     return (
         <section className="home">
             <section className="hero-banner">
@@ -28,7 +24,7 @@ const Home = () => {
                                 <div className="d-flex flex-column justify-content-center align-items-center align-items-lg-baseline mb-15 mb-lg-0">
                                     <h1 className="text-center text-lg-left headline">Shop the new Signature Collection</h1>
                                     <p className="text-center text-lg-left desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</p>
-                                    <button className="btn btn-primary" onClick={ () => shop()}>shop now</button>
+                                    <button className="btn btn-primary" onClick={() => shop()}>shop now</button>
                                 </div>
                             </div>
                         </div>
@@ -92,8 +88,8 @@ const Home = () => {
                                     <h1 className="text-center text-lg-left headline">Take off in the new Signature Legging</h1>
                                     <p className="text-center text-lg-left desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</p>
                                     <div className="btn-div d-flex flex-column flex-lg-row">
-                                        <button className="btn btn-outline collection" onClick={ () => shop()}>shop collection</button>
-                                        <button className="btn btn-primary" onClick={ () => shop()}>shop now</button>
+                                        <button className="btn btn-outline collection" onClick={() => shop()}>shop collection</button>
+                                        <button className="btn btn-primary" onClick={() => shop()}>shop now</button>
                                     </div>
                                     <div className="color-band"></div>
                                 </div>

@@ -10,16 +10,13 @@ const Checkout = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const checkoutProduct = useSelector(state => state.checkout);
-    console.log(checkoutProduct);
 
     const summary = useSelector(state => state.summary);
-    console.log(summary);
 
     const dispatch = useDispatch();
     let navigate = useNavigate();
 
     const onSubmit = (data) => {
-        console.log(data);
         dispatch(checkout_action(data));
         navigate("/shipping");
     }
@@ -104,7 +101,7 @@ const Checkout = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <input type="submit" value="CONTINUE TO SHIPPING" className="btn btn-outline mobile-btn"/>
+                                <input type="submit" value="CONTINUE TO SHIPPING" className="btn btn-outline mobile-btn" />
                             </div>
                             <div className="shipping-method">
                                 <p>2. Shipping Method</p>
@@ -113,8 +110,8 @@ const Checkout = () => {
                                 <p>3. Payment Information</p>
                             </div>
                         </div>
-                        
-                        
+
+
                     </form>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--4">
@@ -124,14 +121,14 @@ const Checkout = () => {
                     </div>
                     <div className="summary">
                         <h5>Pricing Summary</h5>
-                            {
-                                <div className="pricing-details">
+                        {
+                            <div className="pricing-details">
 
-                                    <Summary/>
-                                </div>
+                                <Summary />
+                            </div>
 
-                            }
-                           
+                        }
+
                     </div>
                 </div>
             </div>

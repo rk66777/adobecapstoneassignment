@@ -11,18 +11,15 @@ const Payment = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const chekoutDetails = useSelector(state => state.checkout.checkout);
-    console.log("chekoutDetails", chekoutDetails);
-    const checkOutFormData = chekoutDetails.length > 0 ?  chekoutDetails[0] : {};
+    const checkOutFormData = chekoutDetails.length > 0 ? chekoutDetails[0] : {};
 
     const shippingDetails = useSelector(state => state.shipping.shipping);
-    console.log("shippingDetails", shippingDetails);
-    const shippingFormData = shippingDetails.length > 0 ?  shippingDetails[0] : {};
+    const shippingFormData = shippingDetails.length > 0 ? shippingDetails[0] : {};
 
     const dispatch = useDispatch();
     let navigate = useNavigate();
 
     const onSubmit = (data) => {
-        console.log(data);
         dispatch(payment_action(data));
         navigate("/order");
     }
@@ -91,7 +88,7 @@ const Payment = () => {
                     <div className="summary">
                         <h5>Pricing Summary</h5>
                         <div className="pricing-details">
-                            <Summary/>
+                            <Summary />
                         </div>
                     </div>
                 </div>

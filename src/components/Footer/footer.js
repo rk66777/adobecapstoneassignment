@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <hr className="footer-line"/>
+            <hr className="footer-line" />
             <section className="footer-container container">
                 <div className="division-container">
                     <div className="division division-1">
@@ -40,10 +40,10 @@ const Footer = () => {
                     </div>
                 </div>
             </section>
-            <hr className="copyright-line"/>
+            <hr className="copyright-line" />
             <section className="copyright-container container">
                 <div className="footer-logo-div d-none d-lg-block">
-                    <img src={logo} className="footer-logo" alt="venia logo"/>
+                    <img src={logo} className="footer-logo" alt="venia logo" />
                 </div>
                 <div className="terms">
                     <a href="/" className="terms-text">Terms of Use</a>

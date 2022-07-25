@@ -42,11 +42,11 @@ const ProductDetail = () => {
         )
     }
 
-        let navigate = useNavigate();
-        const addProduct =(product) =>{
-            dispatch(addtocart_action(product));
-            navigate("/cart");
-        }
+    let navigate = useNavigate();
+    const addProduct = (product) => {
+        dispatch(addtocart_action(product));
+        navigate("/cart");
+    }
 
     const ViewProductDetails = () => {
 
@@ -81,10 +81,10 @@ const ProductDetail = () => {
                         <p className="product-desc"> {product.description}</p>
                         <hr />
                         <Quantity quantity={quantity} updateQuantity={value => updateQuantity(value)} />
-                        <button className="btn btn-primary add-cart" onClick={ () => addProduct(product)} >
+                        <button className="btn btn-primary add-cart" onClick={() => addProduct(product)} >
                             ADD TO CART
                         </button>
-                        
+
 
                     </div>
                 </section>
@@ -93,19 +93,19 @@ const ProductDetail = () => {
                         <h3 className="product-title">{product.title}</h3>
                         <p className="product-desc"> {product.description}</p>
                     </div>
-                    
-                    
+
+
                 </section>
             </div>
-            
+
         )
     }
     return (
         <section className="product-detail">
             <div className="container product-detail-container">
-                
-                    {loading ? <Loading /> : <ViewProductDetails />}
-                
+
+                {loading ? <Loading /> : <ViewProductDetails />}
+
             </div>
         </section>
     )

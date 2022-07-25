@@ -4,19 +4,15 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const Order = () => {
     const chekoutDetails = useSelector(state => state.checkout.checkout);
-    console.log("chekoutDetails", chekoutDetails);
     const checkOutFormData = chekoutDetails.length > 0 ? chekoutDetails[0] : {};
 
     const shippingDetails = useSelector(state => state.shipping.shipping);
-    console.log("shippingDetails", shippingDetails);
     const shippingFormData = shippingDetails.length > 0 ? shippingDetails[0] : {};
 
     const paymentDetails = useSelector(state => state.payment.payment);
-    console.log("paymentDetails", paymentDetails);
     const paymentFormData = paymentDetails.length > 0 ? paymentDetails[0] : {};
 
     const cartProduct = useSelector(state => state.cart.cart);
-    console.log("cartDetails", cartProduct);
 
     return (
         <section className="order aem-Grid">

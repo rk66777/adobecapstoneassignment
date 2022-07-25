@@ -8,13 +8,13 @@ const Quantity = ({ quantity, updateQuantity, showLabel, small }) => {
         <div className={`quantity-section ${small ? 'sm' : ''}`}>
             {showLabel && <b>Quantity</b>}
             <div className="count-wrapper">
-                <div className={`icon-wrapper`} onClick={() => quantity > 0 && updateQuantity(quantity-1)}>
+                <div className={`icon-wrapper`} onClick={() => quantity > 0 && updateQuantity(quantity - 1)}>
                     <MinusIcon />
                 </div>
                 <div>
-                    <input type="number" value={quantity}  onChange={(e) => updateQuantity(e.target.value)}/>
+                    <input type="number" value={quantity} onChange={(e) => updateQuantity(e.target.value)} />
                 </div>
-                <div className="icon-wrapper" onClick={() => updateQuantity(quantity+1)}>
+                <div className="icon-wrapper" onClick={() => updateQuantity(quantity + 1)}>
                     <PlusIcon />
                 </div>
             </div>

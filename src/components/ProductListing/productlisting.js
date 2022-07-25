@@ -15,14 +15,13 @@ const ProductListing = () => {
     dispatch(quantity_action(0));
 
     const items = useSelector(state => state.products.products);
-    console.log(items);
+    // console.log(items);
     useEffect(() => {
         dispatch(fetch_products())
     }, []);
 
     const [searchParams] = useSearchParams();
     const category = searchParams.get("category");
-    console.log("category", category);
     let products = [];
     if (category) {
         products = items.filter(prod => prod.category == category);

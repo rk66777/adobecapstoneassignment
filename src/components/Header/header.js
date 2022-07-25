@@ -3,13 +3,6 @@ import './styles/header.scss';
 import logo from './images/venia-logo.png';
 import { NavLink } from 'react-router-dom';
 
-// export default function Header() {
-
-//     return (
-//         <div className="header"></div>
-//     )
-// }
-
 const Header = () => {
 
     return (
@@ -18,7 +11,7 @@ const Header = () => {
                 <div className="header">
                     <nav className="navbar d-flex d-lg-none">
                         <i className="hamburger" id="hamburger" data-state="show"></i>
-                            <a className="nav-title no-underline" href="/">VENIA</a>
+                        <a className="nav-title no-underline" href="/">VENIA</a>
                         <div className="align-right">
                             <div className="cart-icon"></div>
                         </div>
@@ -40,12 +33,12 @@ const Header = () => {
                             </li>
                             <li className="menu-item">
                                 <NavLink className="item" to="/productlisting?category=jewelery">
-                                Jewelery
+                                    Jewelery
                                 </NavLink>
                             </li>
                             <li className="menu-item">
                                 <NavLink className="item" to="/productlisting?category=electronics">
-                                Electronics
+                                    Electronics
                                 </NavLink>
                             </li>
                         </ul>

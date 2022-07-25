@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { quantity_action, summary_action } from "../../state/action";
-import Quantity from "../quantity/quantity";
 import './styles/summary.scss';
 
 const Summary = () => {
@@ -30,20 +28,6 @@ const Summary = () => {
             setTotal(totalAmount);
         }
     }, [cart]);
-
-    // const updateQuantity = (value) => {
-    //     setQuantity(value);
-    //     dispatch(quantity_action(value));
-    //     const summary = {
-    //         subTotal: subTotal,
-    //         coupon: coupon,
-    //         gift: gift,
-    //         tax: tax,
-    //         deliveryPrice: deliveryPrice,
-    //         total: total
-    //     };
-    //     dispatch(summary_action(summary));
-    // }
 
     return (
         <>
