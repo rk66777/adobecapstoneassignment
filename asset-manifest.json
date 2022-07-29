@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/adobecapstoneassignment/static/css/main.65671d31.css",
-    "main.js": "/adobecapstoneassignment/static/js/main.99f90906.js",
+    "main.css": "/adobecapstoneassignment/static/css/main.ffe45263.css",
+    "main.js": "/adobecapstoneassignment/static/js/main.d07177f5.js",
     "static/media/hero-image.jpg": "/adobecapstoneassignment/static/media/hero-image.354ecf125eb18b45e770.jpg",
     "static/media/adventure.jpg": "/adobecapstoneassignment/static/media/adventure.1e2c324f71d4df875ee4.jpg",
     "static/media/women.jpg": "/adobecapstoneassignment/static/media/women.902105bb0e0ba99c6de2.jpg",
@@ -21,15 +21,16 @@
     "static/media/user.svg": "/adobecapstoneassignment/static/media/user.91483d78eeba2c3d646d.svg",
     "static/media/minus-circle.svg": "/adobecapstoneassignment/static/media/minus-circle.79ebb44f1712ce51cbbee373f2fe53a4.svg",
     "static/media/arrow-down.svg": "/adobecapstoneassignment/static/media/arrow-down.ad1e372bfba7126beaef93d275515815.svg",
+    "static/media/red-heart.svg": "/adobecapstoneassignment/static/media/red-heart.153243226b92d5db1a14aaf6a9f2df5c.svg",
     "static/media/twitter.svg": "/adobecapstoneassignment/static/media/twitter.3d9f31115be6b897b5d4.svg",
     "static/media/heart.svg": "/adobecapstoneassignment/static/media/heart.3b35352339d37da7c50b.svg",
     "static/media/edit.svg": "/adobecapstoneassignment/static/media/edit.d86fb5c57c99ad0d8312adf90283ac77.svg",
     "static/media/facebook.svg": "/adobecapstoneassignment/static/media/facebook.b5b54c5572636785078a.svg",
-    "main.65671d31.css.map": "/adobecapstoneassignment/static/css/main.65671d31.css.map",
-    "main.99f90906.js.map": "/adobecapstoneassignment/static/js/main.99f90906.js.map"
+    "main.ffe45263.css.map": "/adobecapstoneassignment/static/css/main.ffe45263.css.map",
+    "main.d07177f5.js.map": "/adobecapstoneassignment/static/js/main.d07177f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.65671d31.css",
-    "static/js/main.99f90906.js"
+    "static/css/main.ffe45263.css",
+    "static/js/main.d07177f5.js"
   ]
 }
