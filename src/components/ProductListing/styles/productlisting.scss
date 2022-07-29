@@ -70,6 +70,9 @@
     .products{
         .product{
             margin-bottom: 15px;
+            .btn{
+                text-decoration: none;
+            }
             .product-image{
                 margin: 0 12px;
                 height: 190px;

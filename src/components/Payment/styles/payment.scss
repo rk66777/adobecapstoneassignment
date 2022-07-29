@@ -83,6 +83,19 @@
     }
     .input-div{
         width: 50%;
+        p{
+            color: var(--negative-2);
+        }
+    }
+    .expiry-div{
+        p{
+            color: var(--negative-2);
+        }
+    }
+    .cvv-div{
+        p{
+            color: var(--negative-2);
+        }
     }
     input{
         border: 2px solid var(--gray-l2);

@@ -93,7 +93,8 @@ const Checkout = () => {
                                         </div>
                                         <div className="input-div zip my-10 d-flex flex-column">
                                             <label className="label-text">ZIP</label>
-                                            <input type="text" {...register("zip", { required: "ZIP is requirred" })} />
+                                            <input type="number" {...register("zip", { required: "ZIP is requirred" })} />
+                                            <p>{errors.zip?.message}</p>
                                         </div>
                                     </div>
                                 </div>

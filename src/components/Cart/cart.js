@@ -2,18 +2,21 @@
 import trash from "./images/trash.svg";
 import edit from "./images/edit.svg";
 import heart from "./images/heart.svg";
+import redHeart from "./images/red-heart.svg";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addtocheckout_action, quantity_action, summary_action } from "../../state/action";
+import { addtocheckout_action, quantity_action, summary_action, removeSelectedProduct, wishlist_action } from "../../state/action";
 import { useDispatch } from 'react-redux';
 import './styles/cart.scss';
 import Quantity from "../quantity/quantity";
 import React, { useState } from "react";
 import Summary from "../Summary/summary";
+import { NavLink } from "react-router-dom";
 
 
 const Cart = () => {
     const quantityVaalue = useSelector(state => state.quantity.quantity);
+    const wishlistData = useSelector(state => state.wishlist.wishlist);
 
     const [quantity, setQuantity] = useState(quantityVaalue);
     const [subTotal, setSubTotal] = useState(0);
@@ -29,13 +32,21 @@ const Cart = () => {
     let navigate = useNavigate();
 
     const checkout = (product) => {
-
-
         dispatch(addtocheckout_action(product));
-
         navigate("/checkout");
     }
+
+    const removeCartItem = (product) => {
+         dispatch(removeSelectedProduct(product));
+    }
+
+    const wishlistItem = (product) =>{
+        dispatch(wishlist_action(product));
+    }
+
     const updateQuantity = (value) => {
+        // let val = value.target.value;
+        // if (value >= 1 && !value.includes("."))
         setQuantity(value);
         dispatch(quantity_action(value));
         const summary = {
@@ -88,13 +99,11 @@ const Cart = () => {
                                     <Quantity quantity={quantity} updateQuantity={value => updateQuantity(value)} />
 
                                     <div className=" aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12" >
-                                        <div className="categories">
-                                            <p><img src={edit} alt="search" className="icon-img" />Edit Item </p>
-                                            <p><img src={trash} alt="search" className="icon-img" />Remove</p>
-                                            <p><img src={heart} alt="search" className="icon-img" />Save for later</p>
+                                        <div className="actions">
+                                        <NavLink to={`/products/${product.id}`}><img src={edit} alt="edit" className="icon-img" />Edit Item </NavLink>
+                                            <a className="delete" onClick={() => removeCartItem(product)}><img src={trash} alt="delete" className="icon-img" />Remove</a>
+                                            <p>{wishlistData?.includes(product)? <img src={redHeart} alt="favourite" className="icon-img" onClick={() => wishlistItem(product)} /> : <img src={heart} alt="favourite" className="icon-img" onClick={() => wishlistItem(product)} />}Save for later</p>
                                         </div>
-
-
                                     </div>
                                 </div>
                                 <div className="summary aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--4">

@@ -17,6 +17,20 @@ export const  addtocart_action= (res) => {
     }
 }
 
+export const  removeSelectedProduct= (res) => {
+    return{
+        type: 'REMOVE_FROM_CART',
+        payload: res
+    }
+}
+
+export const wishlist_action= (res) => {
+    return{
+        type: 'WISHLIST_DATA',
+        payload: res
+    }
+}
+
 export const  addtocheckout_action= (res) => {
     return{
         type: 'ADD_TO_CHECKOUT',

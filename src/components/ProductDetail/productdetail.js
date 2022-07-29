@@ -33,9 +33,12 @@ const ProductDetail = () => {
 
     }, []);
     const updateQuantity = (value) => {
+        // let val = value.target.value;
+        // if (value >= 1 && !value.includes("."))
         setQuantity(value);
         dispatch(quantity_action(value));
     }
+    
     const Loading = () => {
         return (
             <>Loading</>

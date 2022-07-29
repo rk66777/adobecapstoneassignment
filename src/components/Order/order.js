@@ -13,6 +13,7 @@ const Order = () => {
     const paymentFormData = paymentDetails.length > 0 ? paymentDetails[0] : {};
 
     const cartProduct = useSelector(state => state.cart.cart);
+    const quantity = useSelector(state => state.quantity.quantity);
 
     return (
         <section className="order aem-Grid">
@@ -46,7 +47,7 @@ const Order = () => {
                         </div>
                     </div>
                     <div className="cart-details">
-                        <div>{cartProduct.length} Items in your order</div>
+                        <div>{(cartProduct.length)*quantity} Items in your order</div>
                         <div className="product-card-main d-lg-flex justify-content-between aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--8" >
                             {cartProduct && cartProduct.length > 0 ? cartProduct.map((product, index) => {
                                 return (
@@ -59,7 +60,7 @@ const Order = () => {
                                                 <h5>{product.title.substring(0, 25)}</h5>
                                                 <p>Size: Medium</p>
                                                 <p>Color : Storm</p>
-
+                                                <p>Quantity: {quantity}</p>
                                                 <h6 className=" "> ${product.price}</h6>
                                             </div>
                                         </div>

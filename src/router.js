@@ -11,7 +11,6 @@ import Cart from "./components/Cart/cart";
 import Home from "./components/Home/home";
 import Checkout from "./components/Checkout/chekcout";
 import Shipping from "./components/Shipping/shipping";
-import { Navigate } from "react-router-dom";
 import Payment from "./components/Payment/paymment";
 import Order from "./components/Order/order";
 import PageNotFound from "./components/PageNotFound/pageNotFound";
@@ -23,7 +22,7 @@ const Router = () => (
     <App>
         <Header />
         <Routes>
-          <Route path="/" element={<Navigate to="adobecapstoneassignment" />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="adobecapstoneassignment" element={<Home />}></Route>
           <Route path="/productlisting" element={<ProductListing />}></Route>
           <Route path="products/:id" element={<ProductDetail />} />

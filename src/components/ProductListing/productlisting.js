@@ -12,7 +12,7 @@ import { useSearchParams } from "react-router-dom";
 const ProductListing = () => {
 
     const dispatch = useDispatch();
-    dispatch(quantity_action(0));
+    dispatch(quantity_action(1));
 
     const items = useSelector(state => state.products.products);
     // console.log(items);
