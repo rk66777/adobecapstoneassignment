@@ -22,7 +22,7 @@ const Header = () => {
                 <div className="header">
                     <nav className="navbar d-flex d-lg-none">
                         <i className="hamburger" id="hamburger" data-state="show" onClick={() => setToggle(!toggle)}></i>
-                        <a className="nav-title no-underline" href="/">VENIA</a>
+                        <a className="nav-title no-underline" href="/home">VENIA</a>
                         <NavLink className="align-right" to="/cart">
                             <div className="cart-icon"></div>
                             <span className="cart-count">{cartLength}</span>
@@ -33,6 +33,11 @@ const Header = () => {
                                 <button><img src={Close} alt='close' onClick={() => setToggle(!toggle)} /></button>
                             </section>
                             <ul className="menu">
+                            <li className="menu-item">
+                                    <NavLink className="item" to="/home" onClick={() => setToggle(!toggle)}>
+                                        Home
+                                    </NavLink>
+                                </li>
                                 <li className="menu-item">
                                     <NavLink className="item" to="/productlisting" onClick={() => setToggle(!toggle)}>
                                         All
@@ -63,9 +68,14 @@ const Header = () => {
                     </nav>
                     <div className="d-none d-lg-flex">
                         <div className="header-logo">
-                            <a className="nav-title no-underline" href="/">VENIA</a>
+                            <a className="nav-title no-underline" href="/home">VENIA</a>
                         </div>
                         <ul className="menu">
+                        <li className="menu-item">
+                                <NavLink className="item" to="/home" onClick={() => setToggle(!toggle)}>
+                                    Home
+                                </NavLink>
+                            </li>
                             <li className="menu-item">
                                 <NavLink className="item" to="/productlisting" onClick={() => setToggle(!toggle)}>
                                     All

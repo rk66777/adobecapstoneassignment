@@ -23,7 +23,7 @@ const Router = () => (
         <Header />
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
           <Route path="adobecapstoneassignment" element={<Home />}></Route>
           <Route path="/productlisting" element={<ProductListing />}></Route>
           <Route path="products/:id" element={<ProductDetail />} />
