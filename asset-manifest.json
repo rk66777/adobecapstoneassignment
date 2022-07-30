@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/adobecapstoneassignment/static/css/main.ffe45263.css",
-    "main.js": "/adobecapstoneassignment/static/js/main.d07177f5.js",
+    "main.css": "/adobecapstoneassignment/static/css/main.d9e9d740.css",
+    "main.js": "/adobecapstoneassignment/static/js/main.b6af3bf5.js",
     "static/media/hero-image.jpg": "/adobecapstoneassignment/static/media/hero-image.354ecf125eb18b45e770.jpg",
     "static/media/adventure.jpg": "/adobecapstoneassignment/static/media/adventure.1e2c324f71d4df875ee4.jpg",
     "static/media/women.jpg": "/adobecapstoneassignment/static/media/women.902105bb0e0ba99c6de2.jpg",
@@ -11,7 +11,7 @@
     "static/media/jewellery.jfif": "/adobecapstoneassignment/static/media/jewellery.fdc229f8ea062d65e515.jfif",
     "static/media/sliders.svg": "/adobecapstoneassignment/static/media/sliders.07a0e59562aded129aac7c8a5259c413.svg",
     "static/media/trash.svg": "/adobecapstoneassignment/static/media/trash.a3e697fde0ae7e80f40a3f3214ef433d.svg",
-    "static/media/align-justify.svg": "/adobecapstoneassignment/static/media/align-justify.02d085fe48c93935d506.svg",
+    "static/media/hamburger.svg": "/adobecapstoneassignment/static/media/hamburger.fabfd32f060f48238277.svg",
     "index.html": "/adobecapstoneassignment/index.html",
     "static/media/instagram.svg": "/adobecapstoneassignment/static/media/instagram.098205e681981cff2dea.svg",
     "static/media/plus-circle.svg": "/adobecapstoneassignment/static/media/plus-circle.f0e745c0b64b3e549aae3a3efe9664bf.svg",
@@ -26,11 +26,11 @@
     "static/media/heart.svg": "/adobecapstoneassignment/static/media/heart.3b35352339d37da7c50b.svg",
     "static/media/edit.svg": "/adobecapstoneassignment/static/media/edit.d86fb5c57c99ad0d8312adf90283ac77.svg",
     "static/media/facebook.svg": "/adobecapstoneassignment/static/media/facebook.b5b54c5572636785078a.svg",
-    "main.ffe45263.css.map": "/adobecapstoneassignment/static/css/main.ffe45263.css.map",
-    "main.d07177f5.js.map": "/adobecapstoneassignment/static/js/main.d07177f5.js.map"
+    "main.d9e9d740.css.map": "/adobecapstoneassignment/static/css/main.d9e9d740.css.map",
+    "main.b6af3bf5.js.map": "/adobecapstoneassignment/static/js/main.b6af3bf5.js.map"
   },
   "entrypoints": [
-    "static/css/main.ffe45263.css",
-    "static/js/main.d07177f5.js"
+    "static/css/main.d9e9d740.css",
+    "static/js/main.b6af3bf5.js"
   ]
 }
