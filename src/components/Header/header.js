@@ -28,11 +28,16 @@ const Header = () => {
                             <span className="cart-count">{cartLength}</span>
                         </NavLink>
                         {toggle ? <div className="mobile-menu">
-                        <section className="shop-category">
-                            <p>Shop Categories</p>
-                            <button><img src={Close} alt='close' onClick={() => setToggle(!toggle)}/></button>
-                        </section>
+                            <section className="shop-category">
+                                <p>Shop Categories</p>
+                                <button><img src={Close} alt='close' onClick={() => setToggle(!toggle)} /></button>
+                            </section>
                             <ul className="menu">
+                                <li className="menu-item">
+                                    <NavLink className="item" to="/productlisting" onClick={() => setToggle(!toggle)}>
+                                        All
+                                    </NavLink>
+                                </li>
                                 <li className="menu-item">
                                     <NavLink className="item" to="/productlisting?category=women's clothing" onClick={() => setToggle(!toggle)}>
                                         Women
@@ -61,6 +66,11 @@ const Header = () => {
                             <a className="nav-title no-underline" href="/">VENIA</a>
                         </div>
                         <ul className="menu">
+                            <li className="menu-item">
+                                <NavLink className="item" to="/productlisting" onClick={() => setToggle(!toggle)}>
+                                    All
+                                </NavLink>
+                            </li>
                             <li className="menu-item">
                                 <NavLink className="item" to="/productlisting?category=women's clothing">
                                     Women

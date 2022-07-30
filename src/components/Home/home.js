@@ -92,7 +92,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--6 image-area">
+                        <div className="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--12 aem-GridColumn--default--6 image-area">
                             <div className="signature-image-div"><img src={leggings} alt="hero banner" /></div>
                         </div>
                     </div>
