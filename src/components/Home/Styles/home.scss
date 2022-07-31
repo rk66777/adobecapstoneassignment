@@ -62,17 +62,19 @@
                 background-position: center;
             }
 
-            .image-1{
+            .image-1 {
                 background-image: url('../images/hero-image.jpg');
             }
 
-            .image-2{
+            .image-2 {
                 background-image: url('../images/men.jfif');
             }
-            .image-3{
+
+            .image-3 {
                 background-image: url('../images/women.jpg');
             }
-            .image-4{
+
+            .image-4 {
                 background-image: url('../images/jewellery.jfif');
             }
 
@@ -179,6 +181,16 @@
 
 }
 
+@include tablet {
+    .home {
+        .category {
+            .product-category {
+                margin-top: 0;
+            }
+        }
+    }
+
+}
 
 @include desktop {
     .home {

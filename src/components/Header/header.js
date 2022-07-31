@@ -22,7 +22,7 @@ const Header = () => {
                 <div className="header">
                     <nav className="navbar d-flex d-lg-none">
                         <i className="hamburger" id="hamburger" data-state="show" onClick={() => setToggle(!toggle)}></i>
-                        <a className="nav-title no-underline" href="/home">VENIA</a>
+                        <NavLink className="nav-title no-underline" to="/home">VENIA</NavLink>
                         <NavLink className="align-right" to="/cart">
                             <div className="cart-icon"></div>
                             <span className="cart-count">{cartLength}</span>
@@ -68,7 +68,7 @@ const Header = () => {
                     </nav>
                     <div className="d-none d-lg-flex">
                         <div className="header-logo">
-                            <a className="nav-title no-underline" href="/home">VENIA</a>
+                            <NavLink className="nav-title no-underline" to="/home">VENIA</NavLink>
                         </div>
                         <ul className="menu">
                         <li className="menu-item">
