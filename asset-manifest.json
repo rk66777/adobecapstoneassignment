@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/adobecapstoneassignment/static/css/main.a0ba2dca.css",
-    "main.js": "/adobecapstoneassignment/static/js/main.b5f4dcc7.js",
+    "main.css": "/adobecapstoneassignment/static/css/main.e23a401d.css",
+    "main.js": "/adobecapstoneassignment/static/js/main.0bf0042e.js",
     "static/media/hero-image.jpg": "/adobecapstoneassignment/static/media/hero-image.354ecf125eb18b45e770.jpg",
     "static/media/adventure.jpg": "/adobecapstoneassignment/static/media/adventure.1e2c324f71d4df875ee4.jpg",
     "static/media/women.jpg": "/adobecapstoneassignment/static/media/women.902105bb0e0ba99c6de2.jpg",
@@ -26,11 +26,11 @@
     "static/media/heart.svg": "/adobecapstoneassignment/static/media/heart.3b35352339d37da7c50b.svg",
     "static/media/edit.svg": "/adobecapstoneassignment/static/media/edit.d86fb5c57c99ad0d8312adf90283ac77.svg",
     "static/media/facebook.svg": "/adobecapstoneassignment/static/media/facebook.b5b54c5572636785078a.svg",
-    "main.a0ba2dca.css.map": "/adobecapstoneassignment/static/css/main.a0ba2dca.css.map",
-    "main.b5f4dcc7.js.map": "/adobecapstoneassignment/static/js/main.b5f4dcc7.js.map"
+    "main.e23a401d.css.map": "/adobecapstoneassignment/static/css/main.e23a401d.css.map",
+    "main.0bf0042e.js.map": "/adobecapstoneassignment/static/js/main.0bf0042e.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0ba2dca.css",
-    "static/js/main.b5f4dcc7.js"
+    "static/css/main.e23a401d.css",
+    "static/js/main.0bf0042e.js"
   ]
 }
