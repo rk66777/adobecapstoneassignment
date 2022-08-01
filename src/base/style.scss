@@ -80,6 +80,14 @@
 .mt-20{
     margin-top: 20px;
 }
+@include tablet{
+    .d-md-flex{
+        display: flex;
+    }
+    .mr-md-30{
+        margin-right: 30px;
+    }
+}
 @include desktop {
     .container {
         padding: 0 100px;

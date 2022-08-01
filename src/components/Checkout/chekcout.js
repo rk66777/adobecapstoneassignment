@@ -21,7 +21,7 @@ const Checkout = () => {
             <div className="container aem-Grid aem-Grid--12">
                 <h1 className="headline">Checkout</h1>
                 <div className="band"></div>
-                <div className="mr-lg-30 aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--7">
+                <div className="mr-md-30 mr-lg-30 aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--7">
                     <h2 className="sub-title my-10">Guest Checkout</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <h3 className="my-10">Contact Information</h3>

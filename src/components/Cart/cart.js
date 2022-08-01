@@ -31,8 +31,8 @@ const Cart = () => {
     const dispatch = useDispatch();
     let navigate = useNavigate();
 
-    const checkout = (product) => {
-        dispatch(addtocheckout_action(product));
+    const checkout = () => {
+        //dispatch(addtocheckout_action(product));
         navigate("/checkout");
     }
 
@@ -67,7 +67,7 @@ const Cart = () => {
                     <h1 className="headline">Your Shopping Bag</h1>
                     <div className="band"></div>
                 </div>
-
+                <div className="product-card-main aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--8" >
                 {
                     cartProduct && cartProduct.length > 0 ? cartProduct.map((product) => {
                         const subTotal = quantity * product.price;
@@ -83,7 +83,7 @@ const Cart = () => {
                         setTotal(total);
                         return (
                             <>
-                                <div className="product-card-main d-lg-flex justify-content-between aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--8" >
+                                <div className="d-lg-flex justify-content-between mb-30">
                                     <div className="product-card d-flex aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--12 aem-GridColumn--default--6" >
                                         <div className="card-img">
                                             <img src={product.image} className="card-img-top" alt={product.title} width="100%" />
@@ -105,14 +105,8 @@ const Cart = () => {
                                             <p>{wishlistData?.includes(product)? <img src={redHeart} alt="favourite" className="icon-img" onClick={() => wishlistItem(product)} /> : <img src={heart} alt="favourite" className="icon-img" onClick={() => wishlistItem(product)} />}Save for later</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="summary aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--4">
-                                    <h5>Pricing Summary</h5>
-                                    <div className="pricing-details">
-                                        <Summary />
-                                        <div className="btn-div"><button className="checkout btn btn-primary" onClick={() => checkout(product)}>checkout</button></div>
                                     </div>
-                                </div>
+                                
 
 
 
@@ -120,6 +114,14 @@ const Cart = () => {
                         )
                     }) : 'No Items in Cart to Display'
                 }
+                </div>
+                <div className="summary aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--default--4">
+                                    <h5>Pricing Summary</h5>
+                                    <div className="pricing-details">
+                                        <Summary />
+                                        <div className="btn-div"><button className="checkout btn btn-primary" onClick={() => checkout()}>checkout</button></div>
+                                    </div>
+                                </div>
 
             </>
         )
