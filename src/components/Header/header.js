@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     let cart = useSelector(state => state.cart.cart);
+    let quantity = useSelector(state => state.quantity.quantity);
     let cartLength = cart.length;
     // let cartLength = Number(
     //     cart.map((r) => r.quantity).reduce((p, c) => {
@@ -25,7 +26,7 @@ const Header = () => {
                         <NavLink className="nav-title no-underline" to="/home">VENIA</NavLink>
                         <NavLink className="align-right" to="/cart">
                             <div className="cart-icon"></div>
-                            <span className="cart-count">{cartLength}</span>
+                            <span className="cart-count">{cartLength*quantity}</span>
                         </NavLink>
                         {toggle ? <div className="mobile-menu">
                             <section className="shop-category">
@@ -104,7 +105,7 @@ const Header = () => {
                         </ul>
                         <NavLink className="menu-right" to="/cart">
                             <div className="cart-icon"></div>
-                            <span className="cart-count">{cartLength}</span>
+                            <span className="cart-count">{cartLength*quantity}</span>
                         </NavLink>
                     </div>
                 </div>
